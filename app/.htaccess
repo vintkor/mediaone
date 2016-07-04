@@ -1,0 +1,4 @@
+<IfModule mod_deflate.c>
+SetOutputFilter DEFLATE
+Header append Vary User-Agent
+</IfModule>
