@@ -1,1 +1,99 @@
 @import "_fonts";
+
+$main-color: #00AC5C;
+$second-color: #34aff0;
+$accent-color: #ea57bc;
+$white: #fff;
+$black: #000;
+
+$font-size: 16px;
+
+h1 {font-size: $font-size * 2;}
+h2 {font-size: $font-size *1.6;}
+h3 {font-size: $font-size * 1.4;}
+h4 {font-size: $font-size * 1.2;}
+h5 {font-size: $font-size;}
+h6 {font-size: $font-size * 0.9;}
+p, a, div, span, li {font-size: $font-size;}
+
+body {
+    background: $white;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Museo Sans Cyrl";
+    font-weight: 700;
+}
+
+p, a, div, span, li {
+    font-family: "Museo Sans Cyrl";
+    font-weight: 300;
+}
+
+/*---------------------- Header ------------------------*/
+
+.logo {
+    width: 100%;
+    height: auto;
+    max-width: 232px;
+}
+
+header {
+    padding: 15px 0;
+    padding-bottom: 20px;
+}
+
+.top-menu {
+    margin: 0;
+    text-align: right;
+    li {
+        margin-top: 7px;
+        list-style: none;
+        display: inline-block;
+        &:first-child {
+            border: 2px solid $main-color;
+            border-radius: 5px;
+        }
+        a {
+            padding: 6px 14px;
+//            padding-top: 16px;
+            color: $black;
+            display: block;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: .3s;
+            
+            &:hover {
+                color: $main-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.enter {
+    color: $white;
+    background: $main-color;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: $font-size - 2px;
+    display: block;
+    margin-top: 7px;
+    transition: .3s;
+    text-shadow: 1px 1px 1px rgba($black, .3);
+    &:hover {
+        color: $white;
+        text-decoration: none;
+        background: lighten($main-color, 5%);
+    }
+}
+
+
+.bg {
+    background: url(../img/back.jpg);
+    height: 70vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
