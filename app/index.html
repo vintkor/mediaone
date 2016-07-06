@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>MediaOne</title>
+        <link rel="stylesheet" href="css/libs.css">
+        <link rel="stylesheet" href="css/main.css">
         
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -12,6 +14,23 @@
         <![endif]-->
         <script src="js/libs.min.js"></script>
         <script src="js/main.js"></script>
+        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="manifest.json">
+        <meta name="msapplication-TileColor" content="#00AC5C">
+        <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+        <meta name="theme-color" content="#00AC5C">
     </head>
     <body>
     <main id="main">
@@ -22,20 +41,44 @@
                         <div class="row">
                             <div class="col-sm-3">
                                 <a href="/">
-                                    <img src="img/logo-mediaone-new.png" alt="" class="logo">
+                                    <img src="img/logo-mediaone-new.svg" alt="" class="logo"  onerror="this.onerror=null; this.src='logo-mediaone-new.png'">
                                 </a>
                             </div>
-                            <div class="col-sm-7 top-menu-flex">
+                            <div class="col-sm-6 top-menu-flex">
                                 <ul class="top-menu">
-                                    <li><a href="#">Главная</a></li>
+                                    <li><a href="#">
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                             viewBox="0 0 460.298 460.297" class="svg-home">
+                                        <g>
+                                            <path d="M230.149,120.939L65.986,256.274c0,0.191-0.048,0.472-0.144,0.855c-0.094,0.38-0.144,0.656-0.144,0.852v137.041
+                                                c0,4.948,1.809,9.236,5.426,12.847c3.616,3.613,7.898,5.431,12.847,5.431h109.63V303.664h73.097v109.64h109.629
+                                                c4.948,0,9.236-1.814,12.847-5.435c3.617-3.607,5.432-7.898,5.432-12.847V257.981c0-0.76-0.104-1.334-0.288-1.707L230.149,120.939
+                                                z"/>
+                                            <path d="M457.122,225.438L394.6,173.476V56.989c0-2.663-0.856-4.853-2.574-6.567c-1.704-1.712-3.894-2.568-6.563-2.568h-54.816
+                                                c-2.666,0-4.855,0.856-6.57,2.568c-1.711,1.714-2.566,3.905-2.566,6.567v55.673l-69.662-58.245
+                                                c-6.084-4.949-13.318-7.423-21.694-7.423c-8.375,0-15.608,2.474-21.698,7.423L3.172,225.438c-1.903,1.52-2.946,3.566-3.14,6.136
+                                                c-0.193,2.568,0.472,4.811,1.997,6.713l17.701,21.128c1.525,1.712,3.521,2.759,5.996,3.142c2.285,0.192,4.57-0.476,6.855-1.998
+                                                L230.149,95.817l197.57,164.741c1.526,1.328,3.521,1.991,5.996,1.991h0.858c2.471-0.376,4.463-1.43,5.996-3.138l17.703-21.125
+                                                c1.522-1.906,2.189-4.145,1.991-6.716C460.068,229.007,459.021,226.961,457.122,225.438z"/>
+                                        </g>
+                                        </svg>
+                                    </a></li>
                                     <li><a href="#">Услуги</a></li>
                                     <li><a href="#">Портфолио</a></li>
                                     <li><a href="#">Новости</a></li>
                                     <li><a href="#">Контакты</a></li>
                                 </ul>
                             </div>
-                            <div class="col-sm-2">
-                                <a href="#" class="enter">Вход</a>
+                            <div class="col-sm-3">
+                                <div class="header-phone">
+                                    <p>
+                                        <span class="more-phone"></span>
+                                        <span class="phone-code">(044)</span> 245-98-46<br>
+                                        <span class="callback">
+                                            <a href="#">Заказать обратный звонок</a>
+                                        </span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -57,11 +100,18 @@
             </ul>
         </section>
 
-        
-        <h1>Наши услуги</h1>
-        
+        <section class="about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>О нас или другое</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
     
         <section id="cd-team" class="cd-section">
+            <h2>Наши услуги</h2>
             <div class="cd-container">
                 <ul>
                     <li>
@@ -184,194 +234,225 @@
 
     <section class="prices">
         <h2>Цены</h2>
-        <div class="pr-pricing-container pr-full-width pr-secondary-theme">
-            <div class="pr-pricing-switcher">
-                <p class="fieldset">
-                    <input type="radio" name="duration" value="monthly" id="monthly" checked>
-                    <label for="monthly">Monthly</label>
-                    <input type="radio" name="duration" value="yearly" id="yearly">
-                    <label for="yearly">Yearly</label>
-                    <span class="pr-switch"></span>
-                </p>
-            </div> <!-- .pr-pricing-switcher -->
+        <div class="pr-pricing-container pr-has-margins">
+        <div class="pr-pricing-switcher">
+            <p class="fieldset">
+                <input type="radio" name="duration-2" value="monthly" id="monthly-2" checked>
+                <label for="monthly-2">Monthly</label>
+                <input type="radio" name="duration-2" value="yearly" id="yearly-2">
+                <label for="yearly-2">Yearly</label>
+                <span class="pr-switch"></span>
+            </p>
+        </div> <!-- .pr-pricing-switcher -->
 
             <ul class="pr-pricing-list pr-bounce-invert">
-                <li>
-                    <ul class="pr-pricing-wrapper">
-                        <li data-type="monthly" class="is-visible">
-                            <header class="pr-pricing-header">
-                                <h2>Basic</h2>
+            <li>
+                <ul class="pr-pricing-wrapper">
+                    <li data-type="monthly" class="is-visible">
+                        <header class="pr-pricing-header">
+                            <h2>Basic</h2>
 
-                                <div class="pr-price">
-                                    <span class="pr-currency">$</span>
-                                    <span class="pr-value">30</span>
-                                    <span class="pr-duration">mo</span>
-                                </div>
-                            </header> <!-- .pr-pricing-header -->
+                            <div class="pr-price">
+                                <span class="pr-currency">$</span>
+                                <span class="pr-value">30</span>
+                                <span class="pr-duration">mo</span>
+                            </div>
+                        </header> <!-- .pr-pricing-header -->
 
-                            <div class="pr-pricing-body">
-                                <ul class="pr-pricing-features">
-                                    <li><em>256MB</em> Memory</li>
-                                    <li><em>1</em> User</li>
-                                    <li><em>1</em> Website</li>
-                                    <li><em>1</em> Domain</li>
-                                    <li><em>Unlimited</em> Bandwidth</li>
-                                    <li><em>24/7</em> Support</li>
-                                </ul>
-                            </div> <!-- .pr-pricing-body -->
+                        <div class="pr-pricing-body">
+                            <ul class="pr-pricing-features">
+                                <li><span>256MB</span> Memory</li>
+                                <li><span>1</span> User</li>
+                                <li><span>1</span> Website</li>
+                                <li><span>1</span> Domain</li>
+                                <li><span>Unlimited</span> Bandwidth</li>
+                                <li><span>24/7</span> Support</li>
+                            </ul>
+                        </div> <!-- .pr-pricing-body -->
 
-                            <footer class="pr-pricing-footer">
-                                <a class="pr-select" href="">Select</a>
-                            </footer> <!-- .pr-pricing-footer -->
-                        </li>
+                        <footer class="pr-pricing-footer">
+                            <a class="pr-select" href="#">Select</a>
+                        </footer>  <!-- .pr-pricing-footer -->
+                    </li>
 
-                        <li data-type="yearly" class="is-hidden">
-                            <header class="pr-pricing-header">
-                                <h2>Basic</h2>
+                    <li data-type="yearly" class="is-hidden">
+                        <header class="pr-pricing-header">
+                            <h2>Basic</h2>
 
-                                <div class="pr-price">
-                                    <span class="pr-currency">$</span>
-                                    <span class="pr-value">320</span>
-                                    <span class="pr-duration">yr</span>
-                                </div>
-                            </header> <!-- .pr-pricing-header -->
+                            <div class="pr-price">
+                                <span class="pr-currency">$</span>
+                                <span class="pr-value">320</span>
+                                <span class="pr-duration">yr</span>
+                            </div>
+                        </header> <!-- .pr-pricing-header -->
 
-                            <div class="pr-pricing-body">
-                                <ul class="pr-pricing-features">
-                                    <li><em>256MB</em> Memory</li>
-                                    <li><em>1</em> User</li>
-                                    <li><em>1</em> Website</li>
-                                    <li><em>1</em> Domain</li>
-                                    <li><em>Unlimited</em> Bandwidth</li>
-                                    <li><em>24/7</em> Support</li>
-                                </ul>
-                            </div> <!-- .pr-pricing-body -->
+                        <div class="pr-pricing-body">
+                            <ul class="pr-pricing-features">
+                                <li><span>256MB</span> Memory</li>
+                                <li><span>1</span> User</li>
+                                <li><span>1</span> Website</li>
+                                <li><span>1</span> Domain</li>
+                                <li><span>Unlimited</span> Bandwidth</li>
+                                <li><span>24/7</span> Support</li>
+                            </ul>
+                        </div> <!-- .pr-pricing-body -->
 
-                            <footer class="pr-pricing-footer">
-                                <a class="pr-select" href="">Select</a>
-                            </footer> <!-- .pr-pricing-footer -->
-                        </li>
-                    </ul> <!-- .pr-pricing-wrapper -->
-                </li>
+                        <footer class="pr-pricing-footer">
+                            <a class="pr-select" href="#">Select</a>
+                        </footer>  <!-- .pr-pricing-footer -->
+                    </li>
+                </ul> <!-- .pr-pricing-wrapper -->
+            </li>
 
-                <li class="pr-popular">
-                    <ul class="pr-pricing-wrapper">
-                        <li data-type="monthly" class="is-visible">
-                            <header class="pr-pricing-header">
-                                <h2>Popular</h2>
+            <li class="pr-popular">
+                <ul class="pr-pricing-wrapper">
+                    <li data-type="monthly" class="is-visible">
+                        <header class="pr-pricing-header">
+                            <h2>Popular</h2>
+                            <div class="pr-price">
+                                <span class="pr-currency">$</span>
+                                <span class="pr-value">60</span>
+                                <span class="pr-duration">mo</span>
+                            </div>
+                        </header> <!-- .pr-pricing-header -->
 
-                                <div class="pr-price">
-                                    <span class="pr-currency">$</span>
-                                    <span class="pr-value">60</span>
-                                    <span class="pr-duration">mo</span>
-                                </div>
-                            </header> <!-- .pr-pricing-header -->
+                        <div class="pr-pricing-body">
+                            <ul class="pr-pricing-features">
+                                <li><span>512MB</span> Memory</li>
+                                <li><span>3</span> Users</li>
+                                <li><span>5</span> Websites</li>
+                                <li><span>7</span> Domains</li>
+                                <li><span>Unlimited</span> Bandwidth</li>
+                                <li><span>24/7</span> Support</li>
+                            </ul>
+                        </div> <!-- .pr-pricing-body -->
 
-                            <div class="pr-pricing-body">
-                                <ul class="pr-pricing-features">
-                                    <li><em>512MB</em> Memory</li>
-                                    <li><em>3</em> Users</li>
-                                    <li><em>5</em> Websites</li>
-                                    <li><em>7</em> Domains</li>
-                                    <li><em>Unlimited</em> Bandwidth</li>
-                                    <li><em>24/7</em> Support</li>
-                                </ul>
-                            </div> <!-- .pr-pricing-body -->
+                        <footer class="pr-pricing-footer">
+                            <a class="pr-select" href="#">Select</a>
+                        </footer>  <!-- .pr-pricing-footer -->
+                    </li>
 
-                            <footer class="pr-pricing-footer">
-                                <a class="pr-select" href="">Select</a>
-                            </footer> <!-- .pr-pricing-footer -->
-                        </li>
+                    <li data-type="yearly" class="is-hidden">
+                        <header class="pr-pricing-header">
+                            <h2>Popular</h2>
 
-                        <li data-type="yearly" class="is-hidden">
-                            <header class="pr-pricing-header">
-                                <h2>Popular</h2>
+                            <div class="pr-price">
+                                <span class="pr-currency">$</span>
+                                <span class="pr-value">630</span>
+                                <span class="pr-duration">yr</span>
+                            </div>
+                        </header> <!-- .pr-pricing-header -->
 
-                                <div class="pr-price">
-                                    <span class="pr-currency">$</span>
-                                    <span class="pr-value">630</span>
-                                    <span class="pr-duration">yr</span>
-                                </div>
-                            </header> <!-- .pr-pricing-header -->
+                        <div class="pr-pricing-body">
+                            <ul class="pr-pricing-features">
+                                <li><span>512MB</span> Memory</li>
+                                <li><span>3</span> Users</li>
+                                <li><span>5</span> Websites</li>
+                                <li><span>7</span> Domains</li>
+                                <li><span>Unlimited</span> Bandwidth</li>
+                                <li><span>24/7</span> Support</li>
+                            </ul>
+                        </div> <!-- .pr-pricing-body -->
 
-                            <div class="pr-pricing-body">
-                                <ul class="pr-pricing-features">
-                                    <li><em>512MB</em> Memory</li>
-                                    <li><em>3</em> Users</li>
-                                    <li><em>5</em> Websites</li>
-                                    <li><em>7</em> Domains</li>
-                                    <li><em>Unlimited</em> Bandwidth</li>
-                                    <li><em>24/7</em> Support</li>
-                                </ul>
-                            </div> <!-- .pr-pricing-body -->
+                        <footer class="pr-pricing-footer">
+                            <a class="pr-select" href="#">Select</a>
+                        </footer>  <!-- .pr-pricing-footer -->
+                    </li>
+                </ul> <!-- .pr-pricing-wrapper -->
+            </li>
 
-                            <footer class="pr-pricing-footer">
-                                <a class="pr-select" href="">Select</a>
-                            </footer> <!-- .pr-pricing-footer -->
-                        </li>
-                    </ul>
-                </li> <!-- .pr-pricing-wrapper -->
+            <li>
+                <ul class="pr-pricing-wrapper">
+                    <li data-type="monthly" class="is-visible">
+                        <header class="pr-pricing-header">
+                            <h2>Premier</h2>
 
-                <li>
-                    <ul class="pr-pricing-wrapper">
-                        <li data-type="monthly" class="is-visible">
-                            <header class="pr-pricing-header">
-                                <h2>Premier</h2>
+                            <div class="pr-price">
+                                <span class="pr-currency">$</span>
+                                <span class="pr-value">90</span>
+                                <span class="pr-duration">mo</span>
+                            </div>
+                        </header> <!-- .pr-pricing-header -->
 
-                                <div class="pr-price">
-                                    <span class="pr-currency">$</span>
-                                    <span class="pr-value">90</span>
-                                    <span class="pr-duration">mo</span>
-                                </div>
-                            </header> <!-- .pr-pricing-header -->
+                        <div class="pr-pricing-body">
+                            <ul class="pr-pricing-features">
+                                <li><span>1024MB</span> Memory</li>
+                                <li><span>5</span> Users</li>
+                                <li><span>10</span> Websites</li>
+                                <li><span>10</span> Domains</li>
+                                <li><span>Unlimited</span> Bandwidth</li>
+                                <li><span>24/7</span> Support</li>
+                            </ul>
+                        </div> <!-- .pr-pricing-body -->
 
-                            <div class="pr-pricing-body">
-                                <ul class="pr-pricing-features">
-                                    <li><em>1024MB</em> Memory</li>
-                                    <li><em>5</em> Users</li>
-                                    <li><em>10</em> Websites</li>
-                                    <li><em>10</em> Domains</li>
-                                    <li><em>Unlimited</em> Bandwidth</li>
-                                    <li><em>24/7</em> Support</li>
-                                </ul>
-                            </div> <!-- .pr-pricing-body -->
+                        <footer class="pr-pricing-footer">
+                            <a class="pr-select" href="#">Select</a>
+                        </footer>  <!-- .pr-pricing-footer -->
+                    </li>
 
-                            <footer class="pr-pricing-footer">
-                                <a class="pr-select" href="">Select</a>
-                            </footer> <!-- .pr-pricing-footer -->
-                        </li>
+                    <li data-type="yearly" class="is-hidden">
+                        <header class="pr-pricing-header">
+                            <h2>Premier</h2>
 
-                        <li data-type="yearly" class="is-hidden">
-                            <header class="pr-pricing-header">
-                                <h2>Premier</h2>
+                            <div class="pr-price">
+                                <span class="pr-currency">$</span>
+                                <span class="pr-value">950</span>
+                                <span class="pr-duration">yr</span>
+                            </div>
+                        </header> <!-- .pr-pricing-header -->
 
-                                <div class="pr-price">
-                                    <span class="pr-currency">$</span>
-                                    <span class="pr-value">950</span>
-                                    <span class="pr-duration">yr</span>
-                                </div>
-                            </header> <!-- .pr-pricing-header -->
+                        <div class="pr-pricing-body">
+                            <ul class="pr-pricing-features">
+                                <li><span>1024MB</span> Memory</li>
+                                <li><span>5</span> Users</li>
+                                <li><span>10</span> Websites</li>
+                                <li><span>10</span> Domains</li>
+                                <li><span>Unlimited</span> Bandwidth</li>
+                                <li><span>24/7</span> Support</li>
+                            </ul>
+                        </div> <!-- .pr-pricing-body -->
 
-                            <div class="pr-pricing-body">
-                                <ul class="pr-pricing-features">
-                                    <li><em>1024MB</em> Memory</li>
-                                    <li><em>5</em> Users</li>
-                                    <li><em>10</em> Websites</li>
-                                    <li><em>10</em> Domains</li>
-                                    <li><em>Unlimited</em> Bandwidth</li>
-                                    <li><em>24/7</em> Support</li>
-                                </ul>
-                            </div> <!-- .pr-pricing-body -->
-
-                            <footer class="pr-pricing-footer">
-                                <a class="pr-select" href="">Select</a>
-                            </footer> <!-- .pr-pricing-footer -->
-                        </li>
-                    </ul> <!-- .pr-pricing-wrapper -->
-                </li>
-            </ul> <!-- .pr-pricing-list -->
+                        <footer class="pr-pricing-footer">
+                            <a class="pr-select" href="#">Select</a>
+                        </footer>  <!-- .pr-pricing-footer -->
+                    </li>
+                </ul> <!-- .pr-pricing-wrapper -->
+            </li>
+        </ul> <!-- .pr-pricing-list -->
         </div> <!-- .pr-pricing-container -->
     </section>
+    <section class="pre-footer">
+        <div class="container">
+            <div class="row">
+                <h2>Остались вопросы?</h2>
+                <p>Просто позвоните нам по этому номеру (044) 452-98-63 или оставьте нам Ваш номер и мы Вам обязательно перезвоним и ответим на все вопросы!</p>
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6"></div>
+                <div class="col-sm-3"></div>
+            </div>
+        </div>
+    </section>  
+    <script src="//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+
+    <section class="maps">
+        <div id="yamaps"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 position">
+                    <div class="forma col-sm-4">
+                        <h3>Заголовок</h3>
+                        <p>Мы тут и тут</p>
+                        <form action="#">
+                            <input type="text" placeholder="Имя" name="name">
+                            <input type="text" placeholder="Телефон" name="phone" class="phone">
+                            <input type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 
 
         <div class="cd-member-bio member-1">
@@ -424,8 +505,7 @@
         <a href="#0" class="cd-member-bio-close">Close</a> <!-- close the author bio section -->
 
         
-        <link rel="stylesheet" href="css/libs.css">
-        <link rel="stylesheet" href="css/main.css">
+        
         
     </body>
 </html>

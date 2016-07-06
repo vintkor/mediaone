@@ -9,7 +9,19 @@ jQuery(document).ready(function(){
             }
 });
 
-// Наши услуги
+
+/*-------------------------Маска для поля номера телефона------------------------*/
+jQuery(function($){
+    $(".phone").mask("8 (999) 999-99-99");
+});
+
+/*-------------------------Logo.svg load error------------------------*/
+
+if (!Modernizr.svg) {
+  $(".logo img").attr("src", "images/logo.png");
+}
+
+/*-------------------------Наши услуги------------------------*/
 
 jQuery(document).ready(function($){
 	var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
@@ -229,5 +241,45 @@ jQuery(document).ready(function($){
 				console.log("no");
 			}
 		});
+	}
+});
+
+/*--------------------------------Yandex Maps---------------------------------*/
+
+$(document).ready(function(){
+	ymaps.ready(init);
+
+	// Создает стиль
+	var s = new YMaps.Style();
+
+
+	function init () {
+	    var myMap = new ymaps.Map("yamaps", {
+	            center: [50.465771, 30.516883],
+	            zoom: 16
+	        }),
+	        myPlacemark = new ymaps.Placemark([50.465771, 30.516883], {
+	            // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+	            balloonContentHeader: "MediaOne",
+	            balloonContentBody: "Busines promotion / Web Solution",
+	            balloonContentFooter: "(095) 000-00-00",
+	            hintContent: "MediaOne"
+	        }, {
+				// Опции.
+	            // Необходимо указать данный тип макета.
+	            iconLayout: 'default#image',
+	            // Своё изображение иконки метки.
+	            iconImageHref: '../img/metka.png',
+	            // Размеры метки.
+	            iconImageSize: [35, 42],
+	            // Смещение левого верхнего угла иконки относительно
+	            // её "ножки" (точки привязки).
+	            iconImageOffset: [-3, -42]        	
+	        });
+
+	    myMap.geoObjects.add(myPlacemark);
+	    myMap.controls
+	        // Кнопка изменения масштаба.
+	        .add('zoomControl', { left: 5, top: 5 })
 	}
 });
