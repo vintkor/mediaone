@@ -37,8 +37,8 @@ gulp.task('scripts', function() {
         'app/libs/slippry/dist/slippry.min.js',
         'app/libs/Headhesive.js/dist/headhesive.js',
         'app/libs/modernizr.js',
-        'app/libs/jquery.maskedinput/dist/jquery.maskedinput.js'
-        // 'app/libs/wow.js',
+        'app/libs/jquery.maskedinput/dist/jquery.maskedinput.js',
+        'app/libs/wow.js'
         // 'app/libs/owl.carousel/owl.carousel.js',
         // 'app/libs/sweetalert/dist/sweetalert.min.js'
         ])

@@ -13,6 +13,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <script src="js/libs.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkyjbb4D65AJGUvunNlN0CNMSspPjp2Ag"></script>
         <script src="js/main.js"></script>
         <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
@@ -39,14 +40,15 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-3 animated wow bounceInLeft" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
                                 <a href="/">
-                                    <img src="img/logo-mediaone-new.svg" alt="" class="logo"  onerror="this.onerror=null; this.src='logo-mediaone-new.png'">
+                                    <img src="img/logo-mediaone-new.svg" alt="" class="logo animated wow tada" data-wow-duration="1s" data-wow-offset="250" data-wow-delay=".8s"  onerror="this.onerror=null; this.src='logo-mediaone-new.png'">
                                 </a>
                             </div>
                             <div class="col-sm-6 top-menu-flex">
                                 <ul class="top-menu">
-                                    <li><a href="#">
+                                    <li class="animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
+                                    <a href="#main" name="main">
                                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                                              viewBox="0 0 460.298 460.297" class="svg-home">
                                         <g>
@@ -63,21 +65,29 @@
                                         </g>
                                         </svg>
                                     </a></li>
-                                    <li><a href="#">Услуги</a></li>
-                                    <li><a href="#">Портфолио</a></li>
-                                    <li><a href="#">Новости</a></li>
-                                    <li><a href="#">Контакты</a></li>
+                                    <li class="animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".2s">
+                                        <a href="#portfolio" name="portfolio">Услуги</a>
+                                    </li>
+                                    <li class="animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".1s">
+                                        <a href="#uslugi" name="uslugi">Портфолио</a>
+                                    </li>
+                                    <li class="animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".3s">
+                                        <a href="#prices" name="prices">Цены</a>
+                                    </li>
+                                    <li class="animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".4s">
+                                        <a href="#maps" name="maps">Контакты</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="col-sm-3">
-                                <div class="header-phone">
+                                <div class="header-phone animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".5s">
                                     <p>
                                         <span class="more-phone"></span>
                                         <span class="phone-code">(044)</span> 245-98-46<br>
-                                        <span class="callback">
-                                            <a href="#">Заказать обратный звонок</a>
-                                        </span>
                                     </p>
+                                    <span class="callback">
+                                        <a href="#">Заказать обратный звонок</a>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +95,7 @@
                 </div>
             </div>
         </header>
-        <section class="top-slider">
+        <!-- <section class="top-slider">
             <ul id="slippry">
                 <li class="slide-1">
                     <a href="#slide1">
@@ -98,121 +108,89 @@
                     </a>
                 </li>
             </ul>
-        </section>
+        </section> -->
 
         <section class="about-us">
             <div class="container">
-                <div class="row">
+                <div class="row position">
+                <div class="animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="250" data-wow-delay="0">
+                <img class="comp " src="img/comp.png" alt="создание сайта в Киеве от студии MediaOne">
+                </div>
                     <div class="col-sm-12">
-                        <h2>О нас или другое</h2>
+                        <h1>Разработка сайтов в <span class="fw-700 main-color">MediaOne</span></h1>
+                        <p class="first col-sm-10">Заказать создание сайта в Киеве от студии MediaOne, значит доверить свой имидж лучшим — <span class="fw-700 main-color">Вы гарантировано получите 100% отдачу</span> и великолепный результат. За время нашей работы было реализовано немало проектов, которые помогают клиентам решать следующие задачи:</p>
+                        <div class="row">
+                            <div class="col-sm-3 goals animated wow fadeInLeft" data-wow-duration="1s" data-wow-offset="250" data-wow-delay=".3s">
+                                <img src="img/mail.png" alt="">
+                                <p>
+                                    <span class="fw-700 main-color">Быть на связи</span> с целевой аудиторией, иметь оперативную обратную связь.
+                                </p>
+                            </div>
+                            <div class="col-sm-3 goals animated wow fadeInLeft" data-wow-duration="1s" data-wow-offset="250" data-wow-delay="0">
+                                <img src="img/mail.png" alt="">
+                                <p>
+                                    Поддерживать эффективное <span class="fw-700 main-color">общение с клиентами</span> и деловыми партнерами.
+                                </p>
+                            </div>
+                            <div class="col-sm-3 goals animated wow fadeInRight" data-wow-duration="1s" data-wow-offset="250" data-wow-delay="0">
+                                <img src="img/mail.png" alt="">
+                                <p>
+                                <span class="fw-700 main-color">Оповещать</span> о появлении новых товаров и услуг о приближении акций и промо-акций.
+                                </p>
+                            </div>
+                            <div class="col-sm-3 goals animated wow fadeInRight" data-wow-duration="1s" data-wow-offset="250" data-wow-delay=".3s">
+                                <img src="img/mail.png" alt="">
+                                <p>
+                                    <span class="fw-700 main-color">Продавать товары</span> и услуги клиентам, проживающим в любой точке земного шара.
+                                </p>
+                            </div>
+                        </div>
+                        <p class="last"><span class="fw-700 main-color">Все это</span> станет доступным и <span class="fw-700 main-color">для вашей компании</span>, если доверите разработку сайта нам.</p>
                     </div>
                 </div>
             </div>
         </section>
-    
-        <section id="cd-team" class="cd-section">
-            <h2>Наши услуги</h2>
-            <div class="cd-container">
-                <ul>
-                    <li>
-                        <a href="#0" data-type="member-1">
-                            <figure>
-                                <img src="img/team-member-1.jpg" alt="Team member 1">
-                                <div class="cd-img-overlay"><span>View Bio</span></div>
-                            </figure>
-
-                            <div class="cd-member-info">
-                                John Smith <span>CEO</span>
-                            </div>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#0" data-type="member-2">
-                            <figure>
-                                <img src="img/team-member-1.jpg" alt="Team member 1">
-                                <div class="cd-img-overlay"><span>View Bio</span></div>
-                            </figure>
-
-                            <div class="cd-member-info">
-                                Cristina Cameron <span>Marketing</span>
-                            </div> <!-- cd-member-info -->
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#0" data-type="member-3">
-                            <figure>
-                                <img src="img/team-member-1.jpg" alt="Team member 1">
-                                <div class="cd-img-overlay"><span>View Bio</span></div>
-                            </figure>
-
-                            <div class="cd-member-info">
-                                Samuel Noel <span>Web Design</span>
-                            </div> <!-- cd-member-info -->
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#0" data-type="member-4">
-                            <figure>
-                                <img src="img/team-member-1.jpg" alt="Team member 1">
-                                <div class="cd-img-overlay"><span>View Bio</span></div>
-                            </figure>
-
-                            <div class="cd-member-info">
-                                sdds <span>Web Design</span>
-                            </div> <!-- cd-member-info -->
-                        </a>
-                    </li>
-                </ul>
-            </div> <!-- cd-container -->
-        </section> <!-- cd-team -->
-
-        <div class="cd-overlay"></div>
-
+        
         <!-- Портфолио -->
-
-        <h2>Портфолио</h2>
-    </main>
-    <div class="cd-main">
+    <div  id="portfolio" class="cd-main">
+        <h2>Наши услуги</h2>
         <ul class="cd-gallery">
-            <li class="cd-item">
+            <li class="cd-item animated wow fadeInLeft" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
                 <a href="item-1.html" class="portfolioClick">
                     <div>
-                        <h2>Title 1</h2>
+                        <h2>Сайт-визитка</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur.</p>
-                        <b>View More</b>
+                        <b>Подробнее</b>
                     </div>
                 </a>
             </li>
 
-            <li class="cd-item">
+            <li class="cd-item animated wow fadeInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
                 <a href="item-2.html" class="portfolioClick">
                     <div>
-                        <h2>Title 2</h2>
+                        <h2>Landing Page</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur.</p>
-                        <b>View More</b>
+                        <b>Подробнее</b>
                     </div>
                 </a>
             </li>
 
-            <li class="cd-item">
-                <a class="dark-text" href="item-3.html" class="portfolioClick">
+            <li class="cd-item animated wow fadeInLeft" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".3s">
+                <a href="item-3.html" class="portfolioClick">
                     <div>
-                        <h2>Title 3</h2>
+                        <h2>Интернет магазин</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur.</p>
-                        <b>View More</b>
+                        <b>Подробнее</b>
                     </div>
                 </a>
             </li>
 
-            <li class="cd-item">
+            <li class="cd-item animated wow fadeInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".3s">
                 <a href="item-4.html" class="portfolioClick">
                     <div>
-                        <h2>Title 4</h2>
+                        <h2>Корпоративный сайт</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur.</p>
-                        <b>View More</b>
+                        <b>Подробнее</b>
                     </div>
                 </a>
             </li>
@@ -232,7 +210,125 @@
         <a class="cd-close" href="#0"></a>
     </div> <!-- .cd-folding-panel -->
 
-    <section class="prices">
+    <div id="uslugi"></div>    
+        <section id="cd-team" class="cd-section ">
+            <h2>Портфолио</h2>
+            <div class="cd-container">
+                <ul>
+                    <li class="portfolioClick animated wow fadeInLeft" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".3s">
+                        <a href="#0" data-type="member-1">
+                            <figure>
+                                <!-- <img src="img/port-1.jpg" alt="Team member 1"> -->
+                                <div class="port port-1"></div>
+                                <div class="cd-img-overlay"><span>View Bio</span></div>
+                            </figure>
+
+                            <div class="cd-member-info">
+                                John Smith <span>www.ukr.net</span>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li class="portfolioClick animated wow fadeInLeft" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
+                        <a href="#0" data-type="member-2">
+                            <figure>
+                                <div class="port port-2"></div>
+                                <!-- <img src="img/port-2.jpg" alt="Team member 1"> -->
+                                <div class="cd-img-overlay"><span>View Bio</span></div>
+                            </figure>
+
+                            <div class="cd-member-info">
+                                Cristina Cameron <span>www.ukr.net</span>
+                            </div> <!-- cd-member-info -->
+                        </a>
+                    </li>
+
+                    <li class="portfolioClick animated wow fadeInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
+                        <a href="#0" data-type="member-3">
+                            <figure>
+                                <div class="port port-3"></div>
+                                <!-- <img src="img/port-3.jpg" alt="Team member 1"> -->
+                                <div class="cd-img-overlay"><span>View Bio</span></div>
+                            </figure>
+
+                            <div class="cd-member-info">
+                                Samuel Noel <span>www.ukr.net</span>
+                            </div> <!-- cd-member-info -->
+                        </a>
+                    </li>
+
+                    <li class="portfolioClick animated wow fadeInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".3s">
+                        <a href="#0" data-type="member-4">
+                            <figure>
+                                <div class="port port-4"></div>
+                                <!-- <img src="img/port-4.jpg" alt="Team member 1"> -->
+                                <div class="cd-img-overlay"><span>View Bio</span></div>
+                            </figure>
+
+                            <div class="cd-member-info">
+                                sdds <span>www.ukr.net</span>
+                            </div> <!-- cd-member-info -->
+                        </a>
+                    </li>
+                </ul>
+            </div> <!-- cd-container -->
+        </section> <!-- cd-team -->
+    </main>
+
+    <!-- /*--------------------------------------------------------------------------------------*/ -->
+
+    <div class="cd-member-bio member-1">
+        <div class="cd-member-bio-pict">
+            <img src="img/port-1.jpg" alt="Member Bio image">
+        </div> <!-- cd-member-bio-pict -->
+
+        <div class="cd-bio-content">
+            <h1>Meet John Smith</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, amet, voluptatibus et omnis dolore illo saepe voluptatem qui quibusdam sunt corporis ut iure repellendus delectus voluptate explicabo temporibus quos eaque?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, explicabo, doloribus, esse rem officia quas facilis eius alias similique ducimus amet quam odio perspiciatis dolorem ipsam! Ab, dolores, adipisci, explicabo pariatur illum deleniti quam iusto placeat nisi aliquam praesentium mollitia eligendi a! Sequi, voluptatibus sed quos possimus harum rem tempore fugiat? Corporis, officia, assumenda, asperiores blanditiis quidem aliquam fugiat vel excepturi velit provident aut omnis quos aliquid tempora eaque. Nemo, eveniet, sint maxime eum maiores totam est inventore numquam voluptatem hic nam blanditiis placeat illum nesciunt voluptatum eos cum quos magni voluptates ipsam. Perspiciatis alias ducimus libero. Quo provident omnis fugiat ut repellendus optio cum quaerat odio et ipsa. Molestias, atque repellat non maxime amet corporis magni libero quam numquam error beatae at asperiores et a porro nostrum ab necessitatibus esse aliquid iure repellendus obcaecati unde quo eius eum dolores quasi consectetur culpa velit optio! Sequi, dolor, minima, veniam doloribus in ullam cupiditate iste animi ipsum esse eaque similique illo temporibus magni et earum amet sint deleniti est reiciendis. Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.</p>
+        </div> <!-- cd-bio-content -->
+    </div> <!-- cd-member-bio -->
+
+    <div class="cd-member-bio member-2">
+        <div class="cd-member-bio-pict">
+            <img src="img/port-2.jpg" alt="Member Bio image">
+        </div> <!-- cd-member-bio-pict -->
+
+        <div class="cd-bio-content">
+            <h1>Meet Cristina Cameron</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, amet, voluptatibus et omnis dolore illo saepe voluptatem qui quibusdam sunt corporis ut iure repellendus delectus voluptate explicabo temporibus quos eaque?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, explicabo, doloribus, esse rem officia quas facilis eius alias similique ducimus amet quam odio perspiciatis dolorem ipsam! Ab, dolores, adipisci, explicabo pariatur illum deleniti quam iusto placeat nisi aliquam praesentium mollitia eligendi a! Sequi, voluptatibus sed quos possimus harum rem tempore fugiat? Corporis, officia, assumenda, asperiores blanditiis quidem aliquam fugiat vel excepturi velit provident aut omnis quos aliquid tempora eaque. Nemo, eveniet, sint maxime eum maiores totam est inventore numquam voluptatem hic nam blanditiis placeat illum nesciunt voluptatum eos cum quos magni voluptates ipsam. Perspiciatis alias ducimus libero. Quo provident omnis fugiat ut repellendus optio cum quaerat odio et ipsa. Molestias, atque repellat non maxime amet corporis magni libero quam numquam error beatae at asperiores et a porro nostrum ab necessitatibus esse aliquid iure repellendus obcaecati unde quo eius eum dolores quasi consectetur culpa velit optio! Sequi, dolor, minima, veniam doloribus in ullam cupiditate iste animi ipsum esse eaque similique illo temporibus magni et earum amet sint deleniti est reiciendis. Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.</p>
+        </div> <!-- cd-bio-content -->
+    </div> <!-- cd-member-bio -->
+
+    <div class="cd-member-bio member-3">
+        <div class="cd-member-bio-pict">
+            <img src="img/port-3.jpg" alt="Member Bio image">
+        </div> <!-- cd-member-bio-pict -->
+
+        <div class="cd-bio-content">
+            <h1>Meet Samuel Noel</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, amet, voluptatibus et omnis dolore illo saepe voluptatem qui quibusdam sunt corporis ut iure repellendus delectus voluptate explicabo temporibus quos eaque?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, explicabo, doloribus, esse rem officia quas facilis eius alias similique ducimus amet quam odio perspiciatis dolorem ipsam! Ab, dolores, adipisci, explicabo pariatur illum deleniti quam iusto placeat nisi aliquam praesentium mollitia eligendi a! Sequi, voluptatibus sed quos possimus harum rem tempore fugiat? Corporis, officia, assumenda, asperiores blanditiis quidem aliquam fugiat vel excepturi velit provident aut omnis quos aliquid tempora eaque. Nemo, eveniet, sint maxime eum maiores totam est inventore numquam voluptatem hic nam blanditiis placeat illum nesciunt voluptatum eos cum quos magni voluptates ipsam. Perspiciatis alias ducimus libero. Quo provident omnis fugiat ut repellendus optio cum quaerat odio et ipsa. Molestias, atque repellat non maxime amet corporis magni libero quam numquam error beatae at asperiores et a porro nostrum ab necessitatibus esse aliquid iure repellendus obcaecati unde quo eius eum dolores quasi consectetur culpa velit optio! Sequi, dolor, minima, veniam doloribus in ullam cupiditate iste animi ipsum esse eaque similique illo temporibus magni et earum amet sint deleniti est reiciendis. Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.</p>
+        </div> <!-- cd-bio-content -->
+    </div> <!-- cd-member-bio -->
+
+    <div class="cd-member-bio member-4">
+        <div class="cd-member-bio-pict">
+            <img src="img/port-4.jpg" alt="Member Bio image">
+        </div> <!-- cd-member-bio-pict -->
+
+        <div class="cd-bio-content">
+            <h1>Meet Samuel Noel</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, amet, voluptatibus et omnis dolore illo saepe voluptatem qui quibusdam sunt corporis ut iure repellendus delectus voluptate explicabo temporibus quos eaque?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, explicabo, doloribus, esse rem officia quas facilis eius alias similique ducimus amet quam odio perspiciatis dolorem ipsam! Ab, dolores, adipisci, explicabo pariatur illum deleniti quam iusto placeat nisi aliquam praesentium mollitia eligendi a! Sequi, voluptatibus sed quos possimus harum rem tempore fugiat? Corporis, officia, assumenda, asperiores blanditiis quidem aliquam fugiat vel excepturi velit provident aut omnis quos aliquid tempora eaque. Nemo, eveniet, sint maxime eum maiores totam est inventore numquam voluptatem hic nam blanditiis placeat illum nesciunt voluptatum eos cum quos magni voluptates ipsam. Perspiciatis alias ducimus libero. Quo provident omnis fugiat ut repellendus optio cum quaerat odio et ipsa. Molestias, atque repellat non maxime amet corporis magni libero quam numquam error beatae at asperiores et a porro nostrum ab necessitatibus esse aliquid iure repellendus obcaecati unde quo eius eum dolores quasi consectetur culpa velit optio! Sequi, dolor, minima, veniam doloribus in ullam cupiditate iste animi ipsum esse eaque similique illo temporibus magni et earum amet sint deleniti est reiciendis. Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.</p>
+        </div> <!-- cd-bio-content -->
+    </div> <!-- cd-member-bio -->
+    <a href="#0" class="cd-member-bio-close">Close</a> <!-- close the author bio section -->
+
+    <!-- /*--------------------------------------------------------------------------------------*/ -->
+
+    <section id="prices" class="prices">
         <h2>Цены</h2>
         <div class="pr-pricing-container pr-has-margins">
         <div class="pr-pricing-switcher">
@@ -421,91 +517,33 @@
         </ul> <!-- .pr-pricing-list -->
         </div> <!-- .pr-pricing-container -->
     </section>
-    <section class="pre-footer">
-        <div class="container">
+    <section id="maps" class="pre-footer">
+        <div class="container position">
+            <img class="question-1" src="img/question-1.png" alt="Остались вопросы?">
+            <img class="question" src="img/question.png" alt="Остались вопросы?">
             <div class="row">
-                <h2>Остались вопросы?</h2>
-                <p>Просто позвоните нам по этому номеру (044) 452-98-63 или оставьте нам Ваш номер и мы Вам обязательно перезвоним и ответим на все вопросы!</p>
-                <div class="col-sm-3"></div>
-                <div class="col-sm-6"></div>
-                <div class="col-sm-3"></div>
-            </div>
-        </div>
-    </section>  
-    <script src="//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
-
-    <section class="maps">
-        <div id="yamaps"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 position">
-                    <div class="forma col-sm-4">
-                        <h3>Заголовок</h3>
-                        <p>Мы тут и тут</p>
-                        <form action="#">
-                            <input type="text" placeholder="Имя" name="name">
-                            <input type="text" placeholder="Телефон" name="phone" class="phone">
-                            <input type="submit">
-                        </form>
-                    </div>
+                <div class="col-sm-9">
+                    <h2>Остались вопросы?</h2>
+                    <p><span class="fw-700 second-color">Просто позвоните</span> нам по этому номеру<br><span class="fw-100 pre-footer-phone main-color">(044) 452-98-63</span><br> или оставьте нам Ваш номер и мы Вам обязательно перезвоним и ответим на все вопросы!</p>
+                    <form action="#">
+                        <input type="text" placeholder="Телефон" name="phone" class="phone">
+                        <input type="submit">
+                    </form>
                 </div>
             </div>
         </div>
+    </section>  
+    <!-- <script src="//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script> -->
+
+    <!-- <section class="maps">
+        <div id="yamaps"></div>
+    </section> -->
+
+    <section id="cd-google-map">
+        <div id="google-container"></div>
+        <div id="cd-zoom-in"></div>
+        <div id="cd-zoom-out"></div>
+        <div class="address">Киев, ул.Спаская 9а</div> 
     </section>
-    
-
-
-        <div class="cd-member-bio member-1">
-            <div class="cd-member-bio-pict">
-                <img src="img/member-bio-img-1.jpg" alt="Member Bio image">
-            </div> <!-- cd-member-bio-pict -->
-
-            <div class="cd-bio-content">
-                <h1>Meet John Smith</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, amet, voluptatibus et omnis dolore illo saepe voluptatem qui quibusdam sunt corporis ut iure repellendus delectus voluptate explicabo temporibus quos eaque?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, explicabo, doloribus, esse rem officia quas facilis eius alias similique ducimus amet quam odio perspiciatis dolorem ipsam! Ab, dolores, adipisci, explicabo pariatur illum deleniti quam iusto placeat nisi aliquam praesentium mollitia eligendi a! Sequi, voluptatibus sed quos possimus harum rem tempore fugiat? Corporis, officia, assumenda, asperiores blanditiis quidem aliquam fugiat vel excepturi velit provident aut omnis quos aliquid tempora eaque. Nemo, eveniet, sint maxime eum maiores totam est inventore numquam voluptatem hic nam blanditiis placeat illum nesciunt voluptatum eos cum quos magni voluptates ipsam. Perspiciatis alias ducimus libero. Quo provident omnis fugiat ut repellendus optio cum quaerat odio et ipsa. Molestias, atque repellat non maxime amet corporis magni libero quam numquam error beatae at asperiores et a porro nostrum ab necessitatibus esse aliquid iure repellendus obcaecati unde quo eius eum dolores quasi consectetur culpa velit optio! Sequi, dolor, minima, veniam doloribus in ullam cupiditate iste animi ipsum esse eaque similique illo temporibus magni et earum amet sint deleniti est reiciendis. Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.</p>
-            </div> <!-- cd-bio-content -->
-        </div> <!-- cd-member-bio -->
-
-        <div class="cd-member-bio member-2">
-            <div class="cd-member-bio-pict">
-                <img src="img/member-bio-img-2.jpg" alt="Member Bio image">
-            </div> <!-- cd-member-bio-pict -->
-
-            <div class="cd-bio-content">
-                <h1>Meet Cristina Cameron</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, amet, voluptatibus et omnis dolore illo saepe voluptatem qui quibusdam sunt corporis ut iure repellendus delectus voluptate explicabo temporibus quos eaque?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, explicabo, doloribus, esse rem officia quas facilis eius alias similique ducimus amet quam odio perspiciatis dolorem ipsam! Ab, dolores, adipisci, explicabo pariatur illum deleniti quam iusto placeat nisi aliquam praesentium mollitia eligendi a! Sequi, voluptatibus sed quos possimus harum rem tempore fugiat? Corporis, officia, assumenda, asperiores blanditiis quidem aliquam fugiat vel excepturi velit provident aut omnis quos aliquid tempora eaque. Nemo, eveniet, sint maxime eum maiores totam est inventore numquam voluptatem hic nam blanditiis placeat illum nesciunt voluptatum eos cum quos magni voluptates ipsam. Perspiciatis alias ducimus libero. Quo provident omnis fugiat ut repellendus optio cum quaerat odio et ipsa. Molestias, atque repellat non maxime amet corporis magni libero quam numquam error beatae at asperiores et a porro nostrum ab necessitatibus esse aliquid iure repellendus obcaecati unde quo eius eum dolores quasi consectetur culpa velit optio! Sequi, dolor, minima, veniam doloribus in ullam cupiditate iste animi ipsum esse eaque similique illo temporibus magni et earum amet sint deleniti est reiciendis. Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.</p>
-            </div> <!-- cd-bio-content -->
-        </div> <!-- cd-member-bio -->
-
-        <div class="cd-member-bio member-3">
-            <div class="cd-member-bio-pict">
-                <img src="img/member-bio-img-3.jpg" alt="Member Bio image">
-            </div> <!-- cd-member-bio-pict -->
-
-            <div class="cd-bio-content">
-                <h1>Meet Samuel Noel</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, amet, voluptatibus et omnis dolore illo saepe voluptatem qui quibusdam sunt corporis ut iure repellendus delectus voluptate explicabo temporibus quos eaque?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, explicabo, doloribus, esse rem officia quas facilis eius alias similique ducimus amet quam odio perspiciatis dolorem ipsam! Ab, dolores, adipisci, explicabo pariatur illum deleniti quam iusto placeat nisi aliquam praesentium mollitia eligendi a! Sequi, voluptatibus sed quos possimus harum rem tempore fugiat? Corporis, officia, assumenda, asperiores blanditiis quidem aliquam fugiat vel excepturi velit provident aut omnis quos aliquid tempora eaque. Nemo, eveniet, sint maxime eum maiores totam est inventore numquam voluptatem hic nam blanditiis placeat illum nesciunt voluptatum eos cum quos magni voluptates ipsam. Perspiciatis alias ducimus libero. Quo provident omnis fugiat ut repellendus optio cum quaerat odio et ipsa. Molestias, atque repellat non maxime amet corporis magni libero quam numquam error beatae at asperiores et a porro nostrum ab necessitatibus esse aliquid iure repellendus obcaecati unde quo eius eum dolores quasi consectetur culpa velit optio! Sequi, dolor, minima, veniam doloribus in ullam cupiditate iste animi ipsum esse eaque similique illo temporibus magni et earum amet sint deleniti est reiciendis. Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.</p>
-            </div> <!-- cd-bio-content -->
-        </div> <!-- cd-member-bio -->
-
-        <div class="cd-member-bio member-4">
-            <div class="cd-member-bio-pict">
-                <img src="img/member-bio-img-3.jpg" alt="Member Bio image">
-            </div> <!-- cd-member-bio-pict -->
-
-            <div class="cd-bio-content">
-                <h1>Meet Samuel Noel</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, amet, voluptatibus et omnis dolore illo saepe voluptatem qui quibusdam sunt corporis ut iure repellendus delectus voluptate explicabo temporibus quos eaque?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, explicabo, doloribus, esse rem officia quas facilis eius alias similique ducimus amet quam odio perspiciatis dolorem ipsam! Ab, dolores, adipisci, explicabo pariatur illum deleniti quam iusto placeat nisi aliquam praesentium mollitia eligendi a! Sequi, voluptatibus sed quos possimus harum rem tempore fugiat? Corporis, officia, assumenda, asperiores blanditiis quidem aliquam fugiat vel excepturi velit provident aut omnis quos aliquid tempora eaque. Nemo, eveniet, sint maxime eum maiores totam est inventore numquam voluptatem hic nam blanditiis placeat illum nesciunt voluptatum eos cum quos magni voluptates ipsam. Perspiciatis alias ducimus libero. Quo provident omnis fugiat ut repellendus optio cum quaerat odio et ipsa. Molestias, atque repellat non maxime amet corporis magni libero quam numquam error beatae at asperiores et a porro nostrum ab necessitatibus esse aliquid iure repellendus obcaecati unde quo eius eum dolores quasi consectetur culpa velit optio! Sequi, dolor, minima, veniam doloribus in ullam cupiditate iste animi ipsum esse eaque similique illo temporibus magni et earum amet sint deleniti est reiciendis. Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.</p>
-            </div> <!-- cd-bio-content -->
-        </div> <!-- cd-member-bio -->
-        <a href="#0" class="cd-member-bio-close">Close</a> <!-- close the author bio section -->
-
-        
-        
-        
     </body>
 </html>

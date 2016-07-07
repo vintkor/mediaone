@@ -1,0 +1,432 @@
+/*---------------------- Портфолио ------------------------*/
+
+.cd-main {
+    li {
+        list-style: none;
+    }
+}
+
+
+
+.cd-gallery {
+    padding-left: 0;
+}
+
+.cd-main {
+  overflow-x: hidden;
+}
+.cd-main::before {
+  display: none;
+  content: 'mobile';
+}
+.cd-main > * {
+  transition: transform 0.5s 0.4s;
+}
+.cd-main.fold-is-open > * {
+  transform: translateX(100%);
+  transition: transform 0.5s 0s;
+}
+@media only screen and (min-width: 600px) {
+  .cd-main.fold-is-open > * {
+    transform: translateX(600px);
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .cd-main::before {
+    content: 'desktop';
+  }
+  .cd-main.fold-is-open > * {
+    transform: translateX(0);
+  }
+}
+
+.cd-gallery::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cd-gallery::before {
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($main-color, .9);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s 0.4s, visibility 0s 0.9s;
+}
+.fold-is-open .cd-gallery::before {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s 0s, visibility 0s 0s;
+}
+
+.cd-item {
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.5s 0.4s;
+}
+.cd-item > a {
+  display: table;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cd-item > a.dark-text {
+  color: #363558;
+}
+.cd-item > a.dark-text b {
+  border-color: #363558;
+}
+.cd-item div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.cd-item:nth-of-type(1) {
+  background-color: #368282;
+}
+.cd-item:nth-of-type(2) {
+  background-color: #544173;
+}
+.cd-item:nth-of-type(3) {
+  background-color: #7D375F;
+}
+.cd-item:nth-of-type(4) {
+  background-color: #65d29b;
+}
+.cd-item p {
+  opacity: 0.6;
+  padding: 1em 0;
+}
+.cd-item b {
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1em 1.3em;
+  border-radius: 50em;
+  border: 1px solid $white;
+}
+@media only screen and (min-width: 1100px) {
+  .cd-item {
+    width: 50%;
+    float: left;
+    height: 520px;
+    transition: transform 0.5s 0.4s;
+  }
+  .cd-item h2, .cd-item p {
+    transform: translateY(30px);
+    transition: transform 0.3s 0.1s;
+  }
+  .cd-item b {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s 0s, transform 0.3s 0s;
+  }
+  .no-touch .cd-item a:hover h2, .no-touch .cd-item a:hover p {
+    transform: translateY(0);
+    transition: transform 0.3s 0s;
+  }
+  .no-touch .cd-item a:hover b {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s 0.1s, transform 0.3s 0.1s;
+  }
+  .fold-is-open .cd-item {
+    transition: transform 0.5s 0s;
+    transform: translateX(-400px);
+  }
+  .fold-is-open .cd-item:nth-of-type(2n) {
+    transform: translateX(400px);
+  }
+}
+
+/* -------------------------------- 
+
+folding panel
+
+-------------------------------- */
+.cd-folding-panel {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  transition: visibility 0s 0.9s;
+}
+.cd-folding-panel .fold-left,
+.cd-folding-panel .fold-right {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  perspective: 2000px;
+}
+.cd-folding-panel .fold-left::after,
+.cd-folding-panel .fold-right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transition: transform 0.5s 0.4s, background-color 0.5s 0.4s;
+}
+.cd-folding-panel .fold-right {
+  perspective-origin: 0% 50%;
+}
+.cd-folding-panel .fold-right::after {
+  transform-origin: right center;
+  transform: translateX(-100%) rotateY(-90deg);
+  background-color: darken($white, 15%);
+}
+.cd-folding-panel .fold-left {
+  display: none;
+}
+.cd-folding-panel .fold-left::after {
+  background-color: darken($white, 2%);
+}
+.cd-folding-panel .cd-close {
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  top: 85px;
+  right: 20px;
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s 0s;
+}
+
+.cd-close {
+    background: $white;
+    border-radius: 50%;
+    border: 2px solid $main-color;
+}
+.cd-folding-panel .cd-close::after, .cd-folding-panel .cd-close::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 32px;
+  left: 50%;
+  top: 50%;
+  background-color: $main-color;
+  backface-visibility: hidden;
+  transition: opacity 0.2s;
+}
+.cd-folding-panel .cd-close::after {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.cd-folding-panel .cd-close::before {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.cd-folding-panel.is-open {
+  visibility: visible;
+  transition: visibility 0s 0s;
+}
+.cd-folding-panel.is-open .fold-right::after,
+.cd-folding-panel.is-open .fold-left::after {
+  transform: translateX(0);
+  transition: transform 0.5s 0s, background-color 0.5s 0s;
+}
+.cd-folding-panel.is-open .fold-right::after {
+  background-color: darken($white, 2%);
+}
+.cd-folding-panel.is-open .cd-close {
+  opacity: 1;
+  transition: opacity 0.2s 0.5s;
+}
+@media only screen and (min-width: 600px) {
+  .cd-folding-panel {
+    width: 600px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .cd-folding-panel {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 800px;
+  }
+  .cd-folding-panel .fold-left,
+  .cd-folding-panel .fold-right {
+    width: 50%;
+    float: left;
+    height: 100%;
+  }
+  .cd-folding-panel .fold-right {
+    perspective-origin: 0% 50%;
+  }
+  .cd-folding-panel .fold-right::after {
+    transform-origin: right center;
+    transform: translateX(-100%) rotateY(-90deg);
+  }
+  .cd-folding-panel .fold-left {
+    display: block;
+    perspective-origin: 100% 50%;
+  }
+  .cd-folding-panel .fold-left::after {
+    transform-origin: left center;
+    transform: translateX(100%) rotateY(90deg);
+  }
+}
+
+.cd-fold-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 4em 2em;
+  visibility: hidden;
+  transition: visibility 0s 0.4s;
+}
+.cd-fold-content > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.cd-fold-content h2 {
+  transition: transform 0.2s 0.2s, opacity 0.2s 0.2s;
+}
+.cd-fold-content p, .cd-fold-content em {
+  line-height: 1.6;
+}
+.cd-fold-content em {
+  display: inline-block;
+  margin: 1em 0;
+  font-family: "Vollkorn", serif;
+  font-size: $font-size * 1.4;
+  color: $second-color;
+  transition: transform 0.2s 0.1s, opacity 0.2s 0.1s;
+}
+.cd-fold-content p {
+  margin-bottom: 1em;
+  transition: transform 0.2s 0s, opacity 0.2s 0s;
+}
+.is-open .cd-fold-content {
+  overflow-y: auto;
+  visibility: visible;
+  transition: visibility 0s 0.5s;
+}
+.is-open .cd-fold-content > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+.is-open .cd-fold-content h2 {
+  transition: transform 0.2s 0.5s, opacity 0.2s 0.5s;
+}
+.is-open .cd-fold-content em {
+  transition: transform 0.2s 0.6s, opacity 0.2s 0.6s;
+}
+.is-open .cd-fold-content p {
+  transition: transform 0.2s 0.7s, opacity 0.2s 0.7s;
+}
+@media only screen and (min-width: 600px) {
+  .cd-fold-content h2 {
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .cd-fold-content {
+    padding: 4em;
+  }
+  .cd-fold-content > * {
+    transform: translateY(40px);
+  }
+  .cd-fold-content em {
+  }
+  .cd-fold-content p {
+
+  }
+}
+
+/* -------------------------------- 
+
+Javascript disabled
+
+-------------------------------- */
+.no-js .cd-fold-content.single-page {
+  position: static;
+  visibility: visible;
+  height: auto;
+  background-color: #02D5D5;
+}
+.no-js .cd-fold-content.single-page > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.top-slider {
+    position: relative;
+    z-index: 1;
+    #slippry {
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+    .sy-pager li.sy-active a {
+        background-color: $main-color;
+    }
+
+    .sy-controls li a:after {
+        background-image: url("../img/arrows.svg");
+    }
+    .sy-pager {
+        position: absolute;
+        bottom: 20px;
+        z-index: 999;
+    }
+
+    .sy-controls li a:link,
+    .sy-controls li a:visited {
+        opacity: 1;
+    }
+}
+
+
+.cd-member-bio {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    overflow-y: auto;
+    /* smooth scrolling on mobile phones and tablets */
+    -webkit-overflow-scrolling: touch;
+    /* this how we move the author bio section off the canvas */
+    transform: translateX(100vw);
+    transition-property: transform;
+    transition-duration: 0.3s;
+}
+
+h1 {
+    margin-top: 90px;
+}
+h2 {
+    margin: 90px;
+}
+
+main {
+    owerflow-y: hidden;
+}

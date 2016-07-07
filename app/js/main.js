@@ -1,5 +1,5 @@
-jQuery(document).ready(function(){
-    jQuery('#slippry').slippry();
+$(document).ready(function(){
+    $('#slippry').slippry();
     var header = new Headhesive('#stick', options);
     var options = {
 	  offset: '.section-2'
@@ -7,11 +7,51 @@ jQuery(document).ready(function(){
 	classes: {
                 clone:   'headhesive--clone'
             }
-});
+
+/*-------------------------Анимация------------------------*/
+
+    wow = new WOW(
+        {
+            boxClass:     'wow',      // default
+            animateClass: 'animated', // default
+            offset:       0,          // default
+            mobile:       true,       // default
+            live:         true        // default
+        }
+    )
+    wow.init();
 
 
+/*-------------------------Анимация изображений------------------------*/
+
+	$('.about-us').hover().mousemove(function(e){
+		var top = 200 + e.pageY / 100 + 10 + "px";
+		var right = -200 - e.pageX / 100 + 30 + "px";
+        $('.comp').css({
+        	"top" : top,
+        	"right" : right
+        });
+	});
+
+	$('.pre-footer').hover().mousemove(function(w){
+		var topGrass = w.pageY / 100 + "px";
+		var rightGrass = -100 - w.pageX / 100 + "px";
+
+		var topShadow = w.pageY / 100 + "px";
+		var rightShadow = -100 - w.pageX / 40 + "px";
+
+		$('.question').css({
+        	"top" : topGrass,
+        	"right" : rightGrass
+        });
+
+        $('.question-1').css({
+        	"top" : topShadow,
+        	"right" : rightShadow
+        });
+	});
 /*-------------------------Маска для поля номера телефона------------------------*/
-jQuery(function($){
+
     $(".phone").mask("8 (999) 999-99-99");
 });
 
@@ -23,17 +63,58 @@ if (!Modernizr.svg) {
 
 /*-------------------------Наши услуги------------------------*/
 
+// jQuery(document).ready(function($){
+// 	var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+
+// 	//open team-member bio
+// 	$('#cd-team').find('ul li .portfolioClick').on('click', function(event){
+// 		event.preventDefault();
+// 		var selected_member = $(this).data('type');
+// 		$('.cd-member-bio.'+selected_member+'').addClass('slide-in');
+// 		$('.cd-member-bio-close').addClass('is-visible');
+// 		// $("body").css("overflow","hidden");
+
+
+// 		// firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
+// 		if( is_firefox ) {
+// 			$('main').addClass('slide-out').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+// 				$('body').addClass('overflow-hidden');
+// 			});
+// 		} else {
+// 			$('main').addClass('slide-out');
+// 			$('body').addClass('overflow-hidden');
+// 		}
+
+// 	});
+
+// 	//close team-member bio
+// 	$(document).on('click', '.cd-overlay, .cd-member-bio-close', function(event){
+// 		event.preventDefault();
+// 		$('.cd-member-bio').removeClass('slide-in');
+// 		$('.cd-member-bio-close').removeClass('is-visible');
+// 		$('body').css('overflow','visible');
+
+// 		if( is_firefox ) {
+// 			$('main').removeClass('slide-out').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+// 				$('body').removeClass('overflow-hidden');
+// 			});
+// 		} else {
+// 			$('main').removeClass('slide-out');
+// 			$('body').removeClass('overflow-hidden');
+// 		}
+// 	});
+// });
+
+
 jQuery(document).ready(function($){
 	var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
 
 	//open team-member bio
-	$('#cd-team').find('ul a').on('click', function(event){
+	$('#cd-team').find('ul .portfolioClick a').on('click', function(event){
 		event.preventDefault();
 		var selected_member = $(this).data('type');
 		$('.cd-member-bio.'+selected_member+'').addClass('slide-in');
 		$('.cd-member-bio-close').addClass('is-visible');
-		$("body").css("overflow","hidden");
-
 
 		// firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
 		if( is_firefox ) {
@@ -52,7 +133,7 @@ jQuery(document).ready(function($){
 		event.preventDefault();
 		$('.cd-member-bio').removeClass('slide-in');
 		$('.cd-member-bio-close').removeClass('is-visible');
-		$("body").css("overflow","visible");
+		$('body').css('overflow','visible');
 
 		if( is_firefox ) {
 			$('main').removeClass('slide-out').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
@@ -65,7 +146,8 @@ jQuery(document).ready(function($){
 	});
 });
 
-// Портфолио
+
+/*-------------------------Портфолио------------------------*/
 jQuery(document).ready(function($){
 	$('.portfolioClick').on('click', function(){
 		$("body").css("overflow","hidden");
@@ -244,42 +326,250 @@ jQuery(document).ready(function($){
 	}
 });
 
-/*--------------------------------Yandex Maps---------------------------------*/
+/*--------------------------------Google Maps---------------------------------*/
 
-$(document).ready(function(){
-	ymaps.ready(init);
+jQuery(document).ready(function($){
+	//set your google maps parameters
+	var latitude = 50.465990,
+		longitude = 30.517444,
+		map_zoom = 17;
 
-	// Создает стиль
-	var s = new YMaps.Style();
+	//google map custom marker icon - .png fallback for IE11
+	var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
+	var marker_url = ( is_internetExplorer11 ) ? '../img/maps.svg' : '../img/maps.png';
+		
+	//define the basic color of your map, plus a value for saturation and brightness
+	var	main_color = '#00AC5C',
+		saturation_value= -20,
+		brightness_value= 5;
 
+	//we define here the style of the map
+	var style= [ 
+		{
+			//set saturation for the labels on the map
+			elementType: "labels",
+			stylers: [
+				{saturation: saturation_value}
+			]
+		},  
+	    {	//poi stands for point of interest - don't show these lables on the map 
+			featureType: "poi",
+			elementType: "labels",
+			stylers: [
+				{visibility: "off"}
+			]
+		},
+		{
+			//don't show highways lables on the map
+	        featureType: 'road.highway',
+	        elementType: 'labels',
+	        stylers: [
+	            {visibility: "off"}
+	        ]
+	    }, 
+		{ 	
+			//don't show local road lables on the map
+			featureType: "road.local", 
+			elementType: "labels.icon", 
+			stylers: [
+				{visibility: "off"} 
+			] 
+		},
+		{ 
+			//don't show arterial road lables on the map
+			featureType: "road.arterial", 
+			elementType: "labels.icon", 
+			stylers: [
+				{visibility: "off"}
+			] 
+		},
+		{
+			//don't show road lables on the map
+			featureType: "road",
+			elementType: "geometry.stroke",
+			stylers: [
+				{visibility: "off"}
+			]
+		}, 
+		//style different elements on the map
+		{ 
+			featureType: "transit", 
+			elementType: "geometry.fill", 
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		}, 
+		{
+			featureType: "poi",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "poi.government",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "poi.sport_complex",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "poi.attraction",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "poi.business",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "transit",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "transit.station",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "landscape",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+			
+		},
+		{
+			featureType: "road",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		},
+		{
+			featureType: "road.highway",
+			elementType: "geometry.fill",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		}, 
+		{
+			featureType: "water",
+			elementType: "geometry",
+			stylers: [
+				{ hue: main_color },
+				{ visibility: "on" }, 
+				{ lightness: brightness_value }, 
+				{ saturation: saturation_value }
+			]
+		}
+	];
+		
+	//set google map options
+	var map_options = {
+      	center: new google.maps.LatLng(latitude, longitude),
+      	zoom: map_zoom,
+      	panControl: false,
+      	zoomControl: false,
+      	mapTypeControl: false,
+      	streetViewControl: false,
+      	mapTypeId: google.maps.MapTypeId.ROADMAP,
+      	scrollwheel: false,
+      	styles: style,
+    }
+    //inizialize the map
+	var map = new google.maps.Map(document.getElementById('google-container'), map_options);
+	//add a custom marker to the map				
+	var marker = new google.maps.Marker({
+	  	position: new google.maps.LatLng(latitude, longitude),
+	    map: map,
+	    visible: true,
+	 	icon: marker_url,
+	});
 
-	function init () {
-	    var myMap = new ymaps.Map("yamaps", {
-	            center: [50.465771, 30.516883],
-	            zoom: 16
-	        }),
-	        myPlacemark = new ymaps.Placemark([50.465771, 30.516883], {
-	            // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
-	            balloonContentHeader: "MediaOne",
-	            balloonContentBody: "Busines promotion / Web Solution",
-	            balloonContentFooter: "(095) 000-00-00",
-	            hintContent: "MediaOne"
-	        }, {
-				// Опции.
-	            // Необходимо указать данный тип макета.
-	            iconLayout: 'default#image',
-	            // Своё изображение иконки метки.
-	            iconImageHref: '../img/metka.png',
-	            // Размеры метки.
-	            iconImageSize: [35, 42],
-	            // Смещение левого верхнего угла иконки относительно
-	            // её "ножки" (точки привязки).
-	            iconImageOffset: [-3, -42]        	
-	        });
+	//add custom buttons for the zoom-in/zoom-out on the map
+	function CustomZoomControl(controlDiv, map) {
+		//grap the zoom elements from the DOM and insert them in the map 
+	  	var controlUIzoomIn= document.getElementById('cd-zoom-in'),
+	  		controlUIzoomOut= document.getElementById('cd-zoom-out');
+	  	controlDiv.appendChild(controlUIzoomIn);
+	  	controlDiv.appendChild(controlUIzoomOut);
 
-	    myMap.geoObjects.add(myPlacemark);
-	    myMap.controls
-	        // Кнопка изменения масштаба.
-	        .add('zoomControl', { left: 5, top: 5 })
+		// Setup the click event listeners and zoom-in or out according to the clicked element
+		google.maps.event.addDomListener(controlUIzoomIn, 'click', function() {
+		    map.setZoom(map.getZoom()+1)
+		});
+		google.maps.event.addDomListener(controlUIzoomOut, 'click', function() {
+		    map.setZoom(map.getZoom()-1)
+		});
 	}
+
+	var zoomControlDiv = document.createElement('div');
+ 	var zoomControl = new CustomZoomControl(zoomControlDiv, map);
+
+  	//insert the zoom div on the top left of the map
+  	map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
+});
+
+/*--------------------------------Плавная анимация по меню---------------------------------*/
+
+$(document).ready(function() {
+	$('a[href^="#"]').click(function(){
+
+		var el = $(this).attr('href');
+
+		$('body').animate({
+			scrollTop: $(el).offset().top
+		}, 800);
+		return false;
+	});
 });

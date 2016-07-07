@@ -1,0 +1,333 @@
+/*-----------------------Услуги-------------------------------*/
+
+#main {
+    li {
+        list-style: none;
+    }
+}
+
+
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.cd-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+main {
+  position: relative;
+  z-index: 2;
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+main.slide-out {
+  transform: translateX(-100vw);
+}
+main.slide-out .cd-overlay {
+  display: block;
+  animation: cd-fade-in 0.3s;
+}
+@media only screen and (min-width: 768px) {
+  main.slide-out {
+    transform: translateX(-600px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main.slide-out {
+    transform: translateX(-100vw);
+  }
+}
+
+.cd-section {
+  padding: 2em 0;
+  text-align: center;
+  background: $white;
+}
+.cd-section .cd-container {
+  max-width: 768px;
+}
+@media only screen and (min-width: 768px) {
+  .cd-section {
+    padding: 4em;
+  }
+  .cd-section p {
+    line-height: 1.6;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .cd-section {
+    padding: 6em;
+  }
+  .cd-section h2 {
+    margin-bottom: 2em;
+  }
+  .cd-section p {
+    line-height: 1.8;
+  }
+}
+
+.cd-placeholder-1 {
+  background: #f25f5c;
+  color: #fdeaea;
+}
+
+.cd-placeholder-2 {
+  background: #FFF;
+}
+#cd-team .cd-container {
+  max-width: 90%;
+}
+#cd-team li {
+  margin-bottom: 2em;
+  border-radius: 0.25em;
+  box-shadow: 0 0 10px rgba(92, 75, 81, 0);
+  transition: all 0.3s;
+}
+.no-touch #cd-team li:hover {
+  box-shadow: 0 0 10px rgba($black, .3);
+}
+.no-touch #cd-team li:hover .cd-img-overlay {
+  opacity: 1;
+}
+#cd-team figure {
+  position: relative;
+}
+#cd-team img {
+  display: block;
+  width: 100%;
+  border-radius: .25em .25em 0 0;
+}
+#cd-team .cd-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($main-color, .4);
+  opacity: 0;
+  border-radius: .25em .25em 0 0;
+  transition: opacity 0.3s;
+}
+#cd-team .cd-img-overlay span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translateX(-50%) translateY(-50%);
+  color: #FFF;
+}
+#cd-team .cd-member-info {
+  height: 80px;
+  background: #FFF;
+  text-align: center;
+  padding-top: 20px;
+  border-radius: 0 0 .25em .25em;
+}
+#cd-team .cd-member-info span {
+  display: block;
+  font-weight: normal;
+  color: lighten($black, 60%);
+  margin-top: .5em;
+}
+@media only screen and (min-width: 768px) {
+  #cd-team li {
+    width: 23%;
+    float: left;
+    margin-right: 1.5%;
+  }
+  #cd-team li:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.cd-member-bio {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  overflow-y: auto;
+  background: $main-color;
+  z-index: 1;
+  transform: translateX(100vw);
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+.cd-member-bio.slide-in {
+  transform: translateX(0);
+  box-shadow: 0 0 5px rgba($black, .5);
+}
+.cd-member-bio .cd-member-bio-pict {
+  position: relative;
+}
+.cd-member-bio .cd-member-bio-pict::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to top, $main-color, rgba($main-color, .0));
+}
+.no-cssgradients .cd-member-bio .cd-member-bio-pict::after {
+  display: none;
+}
+.cd-member-bio img {
+  width: 100%;
+  display: block;
+}
+.cd-member-bio .cd-bio-content {
+  padding: 1em;
+  color: $white;
+}
+.cd-member-bio .cd-bio-content h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.cd-member-bio .cd-bio-content p {
+  margin: 1em 0;
+  line-height: 1.4;
+  color: $white;
+  text-shadow: 1px 1px 1px rgba($black, .5);
+}
+@media only screen and (min-width: 768px) {
+  .cd-member-bio {
+    width: 600px;
+    transform: translateX(600px);
+  }
+  .cd-member-bio .cd-bio-content {
+    padding: 2em;
+  }
+  .cd-member-bio .cd-bio-content p {
+    line-height: 1.6;
+    margin: 2em 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .cd-member-bio {
+    width: 800px;
+    transform: translateX(800px);
+  }
+  .cd-member-bio .cd-member-bio-pict::after {
+    height: 150px;
+  }
+  .cd-member-bio .cd-bio-content {
+    padding: 4em;
+    transform: translateY(-80px);
+  }
+  .no-cssgradients .cd-member-bio .cd-bio-content {
+    transform: translateY(0);
+  }
+}
+
+.cd-member-bio-close {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: url("../img/cd-icon-close.svg") no-repeat center center;
+  background-size: cover;
+  text-indent: 100%;
+  white-space: nowrap;
+  z-index: 3;
+  display: none;
+}
+.cd-member-bio-close.is-visible {
+  display: block;
+  animation: cd-move-in 0.8s;
+}
+@media only screen and (min-width: 1200px) {
+  .cd-member-bio-close {
+    right: 40px;
+    top: 100px;
+  }
+}
+
+.cd-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($black, .5);
+  cursor: pointer;
+  display: none;
+  z-index: 9999;
+}
+
+
+
+/* -------------------------------- 
+
+xkeyframes 
+
+-------------------------------- */
+
+@keyframes cd-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes cd-move-in {
+  0% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.uslugi {
+  background: radial-gradient(#fff, #eee);
+}
+
+.port {
+    width: 100%;
+    height: 400px;
+    background: $main-color;
+    border-radius: 5px 5px 0 0;
+}
+
+.port-1 {
+    background: url("../img/port-1.jpg") top center;
+    background-size: cover;
+}
+
+.port-2 {
+    background: url("../img/port-2.jpg") top center;
+    background-size: cover;
+}
+
+.port-3 {
+    background: url("../img/port-3.jpg") top center;
+    background-size: cover;
+}
+
+.port-4 {
+    background: url("../img/port-4.jpg") top center;
+    background-size: cover;
+}
