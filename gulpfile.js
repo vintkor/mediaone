@@ -13,6 +13,7 @@ var gulp        = require('gulp'), // Подключаем Gulp
     cache       = require('gulp-cache'), // Подключаем библиотеку кеширования
     autoprefixer= require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
     htmlreplace = require('gulp-html-replace');// Замена "src" в index.html main.js на main.min.js
+    var htmlmin = require('gulp-htmlmin');
 
 gulp.task('sass', function(){ // Создаем таск Sass
     return gulp.src('app/sass/**/*.scss') // Берем источник
@@ -39,9 +40,9 @@ gulp.task('scripts', function() {
         'app/libs/Headhesive.js/dist/headhesive.js',
         'app/libs/modernizr.js',
         'app/libs/jquery.maskedinput/dist/jquery.maskedinput.js',
-        'app/libs/wow.js'
+        'app/libs/wow.js',
+        'app/libs/sweetalert/dist/sweetalert.min.js'
         // 'app/libs/owl.carousel/owl.carousel.js',
-        // 'app/libs/sweetalert/dist/sweetalert.min.js'
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         //.pipe(uglify()) // Сжимаем JS файл
@@ -98,13 +99,20 @@ gulp.task('img', function() {
         .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 });
 
+gulp.task('default', ['watch']);
+
 gulp.task('build', ['clean', 'img', 'sass', 'scripts-min'], function() {
 
     var buildCss = gulp.src([ // Переносим библиотеки в продакшн
-        'app/css/main.css',
         'app/css/libs.min.css'
         ])
     .pipe(gulp.dest('dist/css'))
+
+    var minCss = gulp.src('app/css/main.css')
+    .pipe(cssnano())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/css'))
+
 
     var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшн
     .pipe(gulp.dest('dist/fonts'))
@@ -115,17 +123,24 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts-min'], function() {
     var buildHtml = gulp.src('app/*.html') // Переносим все файлы в корне в продакшн
     .pipe(htmlreplace({
             'css': 'css/libs.min.css',
+            'css2': 'css/main.min.css',
             'js': 'js/main.min.js'
         }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'));
+
     var buildPhp = gulp.src('app/*.php')
     .pipe(gulp.dest('dist'));
+
     var buildPng = gulp.src('app/*.png')
     .pipe(gulp.dest('dist'));
+
     var buildIco = gulp.src('app/*.ico')
     .pipe(gulp.dest('dist'));
+
      var buildJson = gulp.src('app/*.json')
     .pipe(gulp.dest('dist'));
+
     var buildXml = gulp.src('app/*.xml')
     .pipe(gulp.dest('dist'));
 });
