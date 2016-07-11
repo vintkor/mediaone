@@ -5,7 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>MediaOne</title>
+        <!-- build:css -->
         <link rel="stylesheet" href="css/libs.css">
+        <!-- endbuild -->
         <link rel="stylesheet" href="css/main.css">
         
         <!--[if lt IE 9]>
@@ -14,7 +16,9 @@
         <![endif]-->
         <script src="js/libs.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkyjbb4D65AJGUvunNlN0CNMSspPjp2Ag"></script>
+        <!-- build:js -->
         <script src="js/main.js"></script>
+        <!-- endbuild -->
         <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
@@ -86,7 +90,7 @@
                                         <span class="phone-code">(044)</span> 245-98-46<br>
                                     </p>
                                     <span class="callback">
-                                        <a href="#">Заказать обратный звонок</a>
+                                        <a href="#" class="md-trigger" data-toggle="modal" data-target="#myModal">Заказать обратный звонок</a>
                                     </span>
                                 </div>
                             </div>
@@ -151,15 +155,15 @@
             </div>
         </section>
         
-        <!-- Портфолио -->
+        <!-- Услуги -->
     <div  id="portfolio" class="cd-main">
         <h2>Наши услуги</h2>
         <ul class="cd-gallery">
             <li class="cd-item animated wow fadeInLeft" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
                 <a href="item-1.html" class="portfolioClick">
                     <div>
-                        <h2>Сайт-визитка</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <h2>Сайт визитка</h2>
+                        <p>уникальная возможность расширить свой бизнес при минимальных затратах</p>
                         <b>Подробнее</b>
                     </div>
                 </a>
@@ -278,51 +282,39 @@
     <!-- /*--------------------------------------------------------------------------------------*/ -->
 
     <div class="cd-member-bio member-1">
-        <div class="cd-member-bio-pict">
-            <img src="img/port-1.jpg" alt="Member Bio image">
-        </div> <!-- cd-member-bio-pict -->
-
         <div class="cd-bio-content">
-            <h1>Meet John Smith</h1>
+            <h2>Чистый город</h2>
+            <img src="img/port-1.jpg" alt="Member Bio image" class="uslugi-main-img">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, amet, voluptatibus et omnis dolore illo saepe voluptatem qui quibusdam sunt corporis ut iure repellendus delectus voluptate explicabo temporibus quos eaque?</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, explicabo, doloribus, esse rem officia quas facilis eius alias similique ducimus amet quam odio perspiciatis dolorem ipsam! Ab, dolores, adipisci, explicabo pariatur illum deleniti quam iusto placeat nisi aliquam praesentium mollitia eligendi a! Sequi, voluptatibus sed quos possimus harum rem tempore fugiat? Corporis, officia, assumenda, asperiores blanditiis quidem aliquam fugiat vel excepturi velit provident aut omnis quos aliquid tempora eaque. Nemo, eveniet, sint maxime eum maiores totam est inventore numquam voluptatem hic nam blanditiis placeat illum nesciunt voluptatum eos cum quos magni voluptates ipsam. Perspiciatis alias ducimus libero. Quo provident omnis fugiat ut repellendus optio cum quaerat odio et ipsa. Molestias, atque repellat non maxime amet corporis magni libero quam numquam error beatae at asperiores et a porro nostrum ab necessitatibus esse aliquid iure repellendus obcaecati unde quo eius eum dolores quasi consectetur culpa velit optio! Sequi, dolor, minima, veniam doloribus in ullam cupiditate iste animi ipsum esse eaque similique illo temporibus magni et earum amet sint deleniti est reiciendis. Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.</p>
-        </div> <!-- cd-bio-content -->
-    </div> <!-- cd-member-bio -->
+        </div>
+    </div>
 
     <div class="cd-member-bio member-2">
-        <div class="cd-member-bio-pict">
-            <img src="img/port-2.jpg" alt="Member Bio image">
-        </div> <!-- cd-member-bio-pict -->
-
         <div class="cd-bio-content">
-            <h1>Meet Cristina Cameron</h1>
+            <h2>Meet John Smith</h2>
+            <img src="img/port-2.jpg" alt="Member Bio image" class="uslugi-main-img">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, amet, voluptatibus et omnis dolore illo saepe voluptatem qui quibusdam sunt corporis ut iure repellendus delectus voluptate explicabo temporibus quos eaque?</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, explicabo, doloribus, esse rem officia quas facilis eius alias similique ducimus amet quam odio perspiciatis dolorem ipsam! Ab, dolores, adipisci, explicabo pariatur illum deleniti quam iusto placeat nisi aliquam praesentium mollitia eligendi a! Sequi, voluptatibus sed quos possimus harum rem tempore fugiat? Corporis, officia, assumenda, asperiores blanditiis quidem aliquam fugiat vel excepturi velit provident aut omnis quos aliquid tempora eaque. Nemo, eveniet, sint maxime eum maiores totam est inventore numquam voluptatem hic nam blanditiis placeat illum nesciunt voluptatum eos cum quos magni voluptates ipsam. Perspiciatis alias ducimus libero. Quo provident omnis fugiat ut repellendus optio cum quaerat odio et ipsa. Molestias, atque repellat non maxime amet corporis magni libero quam numquam error beatae at asperiores et a porro nostrum ab necessitatibus esse aliquid iure repellendus obcaecati unde quo eius eum dolores quasi consectetur culpa velit optio! Sequi, dolor, minima, veniam doloribus in ullam cupiditate iste animi ipsum esse eaque similique illo temporibus magni et earum amet sint deleniti est reiciendis. Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.</p>
-        </div> <!-- cd-bio-content -->
+        </div>
     </div> <!-- cd-member-bio -->
 
     <div class="cd-member-bio member-3">
-        <div class="cd-member-bio-pict">
-            <img src="img/port-3.jpg" alt="Member Bio image">
-        </div> <!-- cd-member-bio-pict -->
-
         <div class="cd-bio-content">
-            <h1>Meet Samuel Noel</h1>
+            <h2>Meet John Smith</h2>
+            <img src="img/port-3.jpg" alt="Member Bio image" class="uslugi-main-img">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, amet, voluptatibus et omnis dolore illo saepe voluptatem qui quibusdam sunt corporis ut iure repellendus delectus voluptate explicabo temporibus quos eaque?</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, explicabo, doloribus, esse rem officia quas facilis eius alias similique ducimus amet quam odio perspiciatis dolorem ipsam! Ab, dolores, adipisci, explicabo pariatur illum deleniti quam iusto placeat nisi aliquam praesentium mollitia eligendi a! Sequi, voluptatibus sed quos possimus harum rem tempore fugiat? Corporis, officia, assumenda, asperiores blanditiis quidem aliquam fugiat vel excepturi velit provident aut omnis quos aliquid tempora eaque. Nemo, eveniet, sint maxime eum maiores totam est inventore numquam voluptatem hic nam blanditiis placeat illum nesciunt voluptatum eos cum quos magni voluptates ipsam. Perspiciatis alias ducimus libero. Quo provident omnis fugiat ut repellendus optio cum quaerat odio et ipsa. Molestias, atque repellat non maxime amet corporis magni libero quam numquam error beatae at asperiores et a porro nostrum ab necessitatibus esse aliquid iure repellendus obcaecati unde quo eius eum dolores quasi consectetur culpa velit optio! Sequi, dolor, minima, veniam doloribus in ullam cupiditate iste animi ipsum esse eaque similique illo temporibus magni et earum amet sint deleniti est reiciendis. Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.</p>
-        </div> <!-- cd-bio-content -->
+        </div>
     </div> <!-- cd-member-bio -->
 
     <div class="cd-member-bio member-4">
-        <div class="cd-member-bio-pict">
-            <img src="img/port-4.jpg" alt="Member Bio image">
-        </div> <!-- cd-member-bio-pict -->
-
         <div class="cd-bio-content">
-            <h1>Meet Samuel Noel</h1>
+            <h2>Meet John Smith</h2>
+            <img src="img/port-4.jpg" alt="Member Bio image" class="uslugi-main-img">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, amet, voluptatibus et omnis dolore illo saepe voluptatem qui quibusdam sunt corporis ut iure repellendus delectus voluptate explicabo temporibus quos eaque?</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, explicabo, doloribus, esse rem officia quas facilis eius alias similique ducimus amet quam odio perspiciatis dolorem ipsam! Ab, dolores, adipisci, explicabo pariatur illum deleniti quam iusto placeat nisi aliquam praesentium mollitia eligendi a! Sequi, voluptatibus sed quos possimus harum rem tempore fugiat? Corporis, officia, assumenda, asperiores blanditiis quidem aliquam fugiat vel excepturi velit provident aut omnis quos aliquid tempora eaque. Nemo, eveniet, sint maxime eum maiores totam est inventore numquam voluptatem hic nam blanditiis placeat illum nesciunt voluptatum eos cum quos magni voluptates ipsam. Perspiciatis alias ducimus libero. Quo provident omnis fugiat ut repellendus optio cum quaerat odio et ipsa. Molestias, atque repellat non maxime amet corporis magni libero quam numquam error beatae at asperiores et a porro nostrum ab necessitatibus esse aliquid iure repellendus obcaecati unde quo eius eum dolores quasi consectetur culpa velit optio! Sequi, dolor, minima, veniam doloribus in ullam cupiditate iste animi ipsum esse eaque similique illo temporibus magni et earum amet sint deleniti est reiciendis. Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.</p>
-        </div> <!-- cd-bio-content -->
+        </div>
     </div> <!-- cd-member-bio -->
     <a href="#0" class="cd-member-bio-close">Close</a> <!-- close the author bio section -->
 
@@ -532,7 +524,27 @@
                 </div>
             </div>
         </div>
-    </section>  
+    </section>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Заказ обратного звонка</h4>
+                </div>
+                <div class="modal-body">
+                    <center>
+                        <input type="text" placeholder="Телефон" name="phone" class="phone">
+                    </center>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- <script src="//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script> -->
 
     <!-- <section class="maps">
@@ -545,5 +557,14 @@
         <div id="cd-zoom-out"></div>
         <div class="address">Киев, ул.Спаская 9а</div> 
     </section>
+    <div class=vint_contacts_wrapper>
+        <i class="fa fa-phone"></i>
+        <div class=vint_contacts_tel>
+            <div class=vint_contacts_tel1>
+                <div class=vint_contacts_tel2>                    
+                </div>
+            </div>
+        </div>
+    </div>
     </body>
 </html>

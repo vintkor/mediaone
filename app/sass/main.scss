@@ -78,6 +78,10 @@ a:visited {
     color: $second-color;
 }
 
+a:focus, a:active {
+    outline: none;
+}
+
 /*---------------------- Header ------------------------*/
 
 .logo {
@@ -466,4 +470,36 @@ header {
     padding: 7px 25px;
     text-align: center;
     text-shadow: 1px 1px 1px rgba($black, .5);
+}
+
+/*----------------------------Bootstrap modal--------------------------------*/
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        margin: 120px auto;
+    }
+}
+
+.modal-dialog {
+    input {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 10px;
+        border: 2px solid #D1D1D1;
+        transition: .2s;
+        padding: 7px 14px;
+        color: darken($main-color, 20%);
+        font-weight: 100;
+        font-size: $font-size + 2px;
+        border-radius: 5px;
+        text-align: center;
+        &:active,
+        &:focus {
+            border: 2px solid $main-color;
+            outline: none;
+        }
+        &:hover {
+            box-shadow: 0 0 10px rgba($black, .5);
+        }
+    }
 }

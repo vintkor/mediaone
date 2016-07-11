@@ -11,12 +11,13 @@ var gulp        = require('gulp'), // Подключаем Gulp
     imagemin    = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
     pngquant    = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
     cache       = require('gulp-cache'), // Подключаем библиотеку кеширования
-    autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+    autoprefixer= require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+    htmlreplace = require('gulp-html-replace');// Замена "src" в index.html main.js на main.min.js
 
 gulp.task('sass', function(){ // Создаем таск Sass
     return gulp.src('app/sass/**/*.scss') // Берем источник
         .pipe(sass().on('error', sass.logError)) // Преобразуем Sass в CSS посредством gulp-sass
-        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
+        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: false })) // Создаем префиксы
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
@@ -32,8 +33,8 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
-        'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
-        'app/libs/bootstrap/dist/js/bootstrap.min.js',
+        'app/libs/jquery/dist/jquery.js', // Берем jQuery
+        'app/libs//bootstrap/dist/js/bootstrap.js',
         'app/libs/slippry/dist/slippry.min.js',
         'app/libs/Headhesive.js/dist/headhesive.js',
         'app/libs/modernizr.js',
@@ -43,7 +44,7 @@ gulp.task('scripts', function() {
         // 'app/libs/sweetalert/dist/sweetalert.min.js'
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
-        .pipe(uglify()) // Сжимаем JS файл
+        //.pipe(uglify()) // Сжимаем JS файл
         .pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
 });
 
@@ -71,10 +72,19 @@ gulp.task('clear', function () {
 
 gulp.task('default', ['watch']);
 
-// ----------------------Сборка проекта gulp build---------------------------
+// ----------------------Сборка проекта "gulp build"---------------------------
 
 gulp.task('clean', function() {
     return del.sync('dist'); // Удаляем папку dist перед сборкой
+});
+
+gulp.task('scripts-min', function() {
+    return gulp.src([ // Берем все необходимые библиотеки
+        'app/js/main.js'
+        ])
+        .pipe(uglify()) // Сжимаем JS файл
+        .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
+        .pipe(gulp.dest('dist/js')); // Выгружаем в папку app/js
 });
 
 gulp.task('img', function() {
@@ -88,21 +98,25 @@ gulp.task('img', function() {
         .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 });
 
-gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
+gulp.task('build', ['clean', 'img', 'sass', 'scripts-min'], function() {
 
-    var buildCss = gulp.src([ // Переносим библиотеки в продакшен
+    var buildCss = gulp.src([ // Переносим библиотеки в продакшн
         'app/css/main.css',
         'app/css/libs.min.css'
         ])
     .pipe(gulp.dest('dist/css'))
 
-    var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
+    var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшн
     .pipe(gulp.dest('dist/fonts'))
 
-    var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
+    var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшн
     .pipe(gulp.dest('dist/js'))
 
-    var buildHtml = gulp.src('app/*.html') // Переносим все файлы в корне в продакшен
+    var buildHtml = gulp.src('app/*.html') // Переносим все файлы в корне в продакшн
+    .pipe(htmlreplace({
+            'css': 'css/libs.min.css',
+            'js': 'js/main.min.js'
+        }))
     .pipe(gulp.dest('dist'));
     var buildPhp = gulp.src('app/*.php')
     .pipe(gulp.dest('dist'));
@@ -114,5 +128,4 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
     .pipe(gulp.dest('dist'));
     var buildXml = gulp.src('app/*.xml')
     .pipe(gulp.dest('dist'));
-
 });
