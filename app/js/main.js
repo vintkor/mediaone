@@ -517,19 +517,8 @@ jQuery(document).ready(function($){
   	map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
 });
 
-/*-------------------------------- Плавная анимация по меню ---------------------------------*/
 
-$(document).ready(function() {
-	$('a[href^="#"]').click(function(){
 
-		var el = $(this).attr('href');
-
-		$('body').animate({
-			scrollTop: $(el).offset().top
-		}, 800);
-		return false;
-	});
-});
 
 /*------------------------------- Отправка почты ---------------------------------*/
 $(document).ready(function() { // вся магия после загрузки страницы
@@ -590,4 +579,73 @@ $(document).ready(function() { // вся магия после загрузки 
         }
         return false; // вырубаем стандартную отправку формы
     });
+});
+
+/*------------------------------------ Услуги табы ------------------------------------*/
+// Услуги
+
+$(document).ready(function(){
+	// $('.aAll').click(function(){
+	// 	$('.marketing, .sites').css('display', 'block');
+	// 	$('.aMarketing, .aSites').removeClass('active animated fadeIn');
+	// 	$('.marketing, .sites').addClass('animated fadeIn');
+	// 	$(this).addClass('active');
+	// });
+	$('.marketing').css('display', 'none');
+	$('.aSites').click(function(){
+		$('.marketing').css('display', 'none');
+		$('.sites').css('display', 'block');
+		$('.sites').addClass('animated fadeIn');
+		$('.aMarketing, .aAll').removeClass('active animated fadeIn');
+		$(this).addClass('active');
+	});
+	$('.aMarketing').click(function(){
+		$('.marketing').css('display', 'block');
+		$('.sites').css('display', 'none');
+		$('.marketing').addClass('animated fadeIn');
+		$('.aSites, .aAll').removeClass('active animated fadeIn');
+		$(this).addClass('active');
+	});
+});
+
+// Портфолио
+
+$(document).ready(function(){
+	$('.aAll2').click(function(){
+		$('.Store, .Landings').css('display', 'block');
+		$('.aStore, .aLandings').removeClass('active');
+		$(this).addClass('active');
+	});
+	$('.aLandings').click(function(){
+		$('.Store').css('display', 'none');
+		$('.Landings').css('display', 'block');
+		$('.Landings').addClass('animated fadeIn');
+		$('.aStore, .aAll2').removeClass('active animated fadeIn');
+		$(this).addClass('active');
+	});
+	$('.aStore').click(function(){
+		$('.Store').css('display', 'block');
+		$('.Landings').css('display', 'none');
+		$('.Store').addClass('animated fadeIn');
+		$('.aLandings, .aAll2').removeClass('active animated fadeIn');
+		$(this).addClass('active');
+	});
+});
+
+/*-------------------------------- Плавная анимация по меню ---------------------------------*/
+ 
+$(document).ready(function(){
+	$(".top-menu").on("click","a", function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+		event.preventDefault();
+
+		//забираем идентификатор бока с атрибута href
+		var id  = $(this).attr('href'),
+
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;
+		
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body,html').animate({scrollTop: top}, 800);
+	});
 });

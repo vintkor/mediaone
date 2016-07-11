@@ -32,12 +32,6 @@ body {
     background: $white;
 }
 
-*, *::after, *::before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 h1,h2,h3,h4,h5,h6 {
     font-family: "Museo Sans Cyrl";
     font-weight: 300;
@@ -88,7 +82,7 @@ a:focus, a:active {
     width: 100%;
     height: auto;
     transition: .2s;
-    padding-top: 4px;
+    padding-top: 0px;
 }
 
 
@@ -97,17 +91,19 @@ a:focus, a:active {
     text-align: right;
 
     p {
-        font-size: $font-size * 2.4;
+        font-size: $font-size * 1.6;
         font-weight: 300;
         color: darken($black, 5%);
-        padding-top: 17px;
+        padding-top: 9px;
         line-height: 0;
-        color: $second-color;
+        // color: $second-color;
+        padding-bottom: 3px;
 
         .phone-code {
-            color: $black;
-            font-weight: 100;
-            vertical-align: top;
+            // color: $black;
+            // font-weight: 100;
+            // vertical-align: top;
+            font-size: inherit;
         }
     }
 
@@ -117,12 +113,13 @@ a:focus, a:active {
         display: block;
     }
     .callback a {
-        font-size: $font-size - 0.8px;
+        font-size: $font-size - .5px;
         color: lighten($black, 60%);
         transition: .2s;
+        color: darken($main-color, 5%);
+        
 
         &:hover {
-            color: darken($main-color, 5%);
         }
     }
 }
@@ -137,7 +134,7 @@ header {
     text-align: right;
     overflow: hidden;
     li {
-        margin-top: 10px;
+        margin-top: 6px;
         padding-top: 5px;
         list-style: none;
         display: inline-block;
@@ -200,6 +197,9 @@ header {
     .callback {
         margin-top: -10px;
         margin-bottom: 0;
+    }
+    .logo {
+        transform: scale(.8);
     }
 }
 
@@ -500,6 +500,69 @@ header {
         }
         &:hover {
             box-shadow: 0 0 10px rgba($black, .5);
+        }
+    }
+
+    .center {
+        margin: 0 auto;
+        display: block;
+        background: $main-color;
+        border-color: $main-color;
+        color: $white;
+    }
+}
+
+.tabs {
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+    a {
+        padding: 7px 20px;
+        font-size: $font-size * 1.2;
+        font-weight: 100;
+        color: darken($white, 50%);
+        border: 1px solid darken($white, 50%);
+        border-radius: 25px;
+        margin-right: 15px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            border: 1px solid darken($main-color, 3%);
+            color: darken($main-color, 10%);
+        }
+    }
+    .active {
+        background: $main-color;
+        position: relative;
+        color: $white;
+        text-shadow: 1px 1px 1px rgba($black, .4);              
+        border-radius: 25px;
+        border: 1px solid darken($main-color, 3%);
+        &:hover {
+            color: $white;
+        }
+        &:after,
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -5px;
+            width: 10px;
+            height: 10px;
+            background: $white;
+            border-radius: 50%;
+            border: 1px solid darken($main-color, 3%);
+        }
+        &:after {
+            left: -5px;
+        }
+        &:before {
+            right: -5px;
         }
     }
 }

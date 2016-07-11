@@ -55,7 +55,7 @@
                                 <ul class="top-menu">
                                     <li class="animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
                                     <a href="#main" name="main">
-                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                        <!-- <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                                              viewBox="0 0 460.298 460.297" class="svg-home">
                                         <g>
                                             <path d="M230.149,120.939L65.986,256.274c0,0.191-0.048,0.472-0.144,0.855c-0.094,0.38-0.144,0.656-0.144,0.852v137.041
@@ -69,7 +69,8 @@
                                                 L230.149,95.817l197.57,164.741c1.526,1.328,3.521,1.991,5.996,1.991h0.858c2.471-0.376,4.463-1.43,5.996-3.138l17.703-21.125
                                                 c1.522-1.906,2.189-4.145,1.991-6.716C460.068,229.007,459.021,226.961,457.122,225.438z"/>
                                         </g>
-                                        </svg>
+                                        </svg> -->
+                                        Главная
                                     </a></li>
                                     <li class="animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".2s">
                                         <a href="#portfolio" name="portfolio">Услуги</a>
@@ -88,7 +89,6 @@
                             <div class="col-sm-3">
                                 <div class="header-phone animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".5s">
                                     <p>
-                                        <span class="more-phone"></span>
                                         <span class="phone-code">(044)</span> 245-98-46<br>
                                     </p>
                                     <span class="callback">
@@ -160,8 +160,12 @@
         <!-- Услуги -->
     <div  id="portfolio" class="cd-main">
         <h2>Наши услуги</h2>
+        <span class="tabs">
+            <a class="aSites active" href="#sites">Создание сайтов</a>
+            <a class="aMarketing" href="#marketing">Контекстная реклама</a>
+        </span>
         <ul class="cd-gallery">
-            <li class="cd-item animated wow fadeInLeft" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
+            <li class="cd-item sites">
                 <a href="item-1.html" class="portfolioClick">
                     <div>
                         <h2>Сайт визитка</h2>
@@ -171,7 +175,7 @@
                 </a>
             </li>
 
-            <li class="cd-item animated wow fadeInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
+            <li class="cd-item marketing">
                 <a href="item-2.html" class="portfolioClick">
                     <div>
                         <h2>Landing Page</h2>
@@ -181,7 +185,7 @@
                 </a>
             </li>
 
-            <li class="cd-item animated wow fadeInLeft" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".3s">
+            <li class="cd-item marketing">
                 <a href="item-3.html" class="portfolioClick">
                     <div>
                         <h2>Интернет магазин</h2>
@@ -191,7 +195,27 @@
                 </a>
             </li>
 
-            <li class="cd-item animated wow fadeInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".3s">
+            <li class="cd-item sites">
+                <a href="item-4.html" class="portfolioClick">
+                    <div>
+                        <h2>Корпоративный сайт</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <b>Подробнее</b>
+                    </div>
+                </a>
+            </li>
+
+            <li class="cd-item sites">
+                <a href="item-4.html" class="portfolioClick">
+                    <div>
+                        <h2>Корпоративный сайт</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <b>Подробнее</b>
+                    </div>
+                </a>
+            </li>
+
+            <li class="cd-item marketing">
                 <a href="item-4.html" class="portfolioClick">
                     <div>
                         <h2>Корпоративный сайт</h2>
@@ -219,9 +243,14 @@
     <div id="uslugi"></div>    
         <section id="cd-team" class="cd-section ">
             <h2>Портфолио</h2>
+                <span class="tabs">
+                    <a class="aAll2 active" href="#sites">Все работы</a>
+                    <a class="aLandings" href="#sites">Landing Page</a>
+                    <a class="aStore" href="#marketing">Интернет магазины</a>
+                </span>    
             <div class="cd-container">
                 <ul>
-                    <li class="portfolioClick animated wow fadeInLeft" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".3s">
+                    <li class="portfolioClick Store">
                         <a href="#0" data-type="member-1">
                             <figure>
                                 <!-- <img src="img/port-1.jpg" alt="Team member 1"> -->
@@ -235,7 +264,7 @@
                         </a>
                     </li>
                     
-                    <li class="portfolioClick animated wow fadeInLeft" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
+                    <li class="portfolioClick Landings">
                         <a href="#0" data-type="member-2">
                             <figure>
                                 <div class="port port-2"></div>
@@ -249,7 +278,7 @@
                         </a>
                     </li>
 
-                    <li class="portfolioClick animated wow fadeInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
+                    <li class="portfolioClick Landings">
                         <a href="#0" data-type="member-3">
                             <figure>
                                 <div class="port port-3"></div>
@@ -263,7 +292,7 @@
                         </a>
                     </li>
 
-                    <li class="portfolioClick animated wow fadeInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".3s">
+                    <li class="portfolioClick Store">
                         <a href="#0" data-type="member-4">
                             <figure>
                                 <div class="port port-4"></div>
@@ -542,7 +571,7 @@
                         </center>
                     </div>
                     <div class="modal-footer">
-                        <input value="Отправить" type="submit">
+                        <input value="Отправить" type="submit" class="center">
                     </div>
                 </form>
             </div>
