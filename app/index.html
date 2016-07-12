@@ -17,7 +17,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <script src="js/libs.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkyjbb4D65AJGUvunNlN0CNMSspPjp2Ag"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkyjbb4D65AJGUvunNlN0CNMSspPjp2Ag" defer></script>
         <!-- build:js -->
         <script src="js/main.js"></script>
         <!-- endbuild -->
@@ -46,47 +46,42 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="row">
-                            <div class="col-sm-3 animated wow bounceInLeft" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
+                            <div class="col-sm-4 col-md-3 col-xs-12 animated wow bounceInLeft" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
                                 <a href="/">
                                     <img src="img/logo-mediaone-new.svg" alt="" class="logo animated wow tada" data-wow-duration="1s" data-wow-offset="250" data-wow-delay=".8s"  onerror="this.onerror=null; this.src='logo-mediaone-new.png'">
                                 </a>
                             </div>
-                            <div class="col-sm-6 top-menu-flex">
-                                <ul class="top-menu">
-                                    <li class="animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
-                                    <a href="#main" name="main">
-                                        <!-- <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                                             viewBox="0 0 460.298 460.297" class="svg-home">
-                                        <g>
-                                            <path d="M230.149,120.939L65.986,256.274c0,0.191-0.048,0.472-0.144,0.855c-0.094,0.38-0.144,0.656-0.144,0.852v137.041
-                                                c0,4.948,1.809,9.236,5.426,12.847c3.616,3.613,7.898,5.431,12.847,5.431h109.63V303.664h73.097v109.64h109.629
-                                                c4.948,0,9.236-1.814,12.847-5.435c3.617-3.607,5.432-7.898,5.432-12.847V257.981c0-0.76-0.104-1.334-0.288-1.707L230.149,120.939
-                                                z"/>
-                                            <path d="M457.122,225.438L394.6,173.476V56.989c0-2.663-0.856-4.853-2.574-6.567c-1.704-1.712-3.894-2.568-6.563-2.568h-54.816
-                                                c-2.666,0-4.855,0.856-6.57,2.568c-1.711,1.714-2.566,3.905-2.566,6.567v55.673l-69.662-58.245
-                                                c-6.084-4.949-13.318-7.423-21.694-7.423c-8.375,0-15.608,2.474-21.698,7.423L3.172,225.438c-1.903,1.52-2.946,3.566-3.14,6.136
-                                                c-0.193,2.568,0.472,4.811,1.997,6.713l17.701,21.128c1.525,1.712,3.521,2.759,5.996,3.142c2.285,0.192,4.57-0.476,6.855-1.998
-                                                L230.149,95.817l197.57,164.741c1.526,1.328,3.521,1.991,5.996,1.991h0.858c2.471-0.376,4.463-1.43,5.996-3.138l17.703-21.125
-                                                c1.522-1.906,2.189-4.145,1.991-6.716C460.068,229.007,459.021,226.961,457.122,225.438z"/>
-                                        </g>
-                                        </svg> -->
-                                        Главная
-                                    </a></li>
-                                    <li class="animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".2s">
+                            <div class="col-sm-3 col-md-6 col-xs-4">
+                                <nav class="wrapper-menu">
+                                <ul id="top-nav" class="top-menu">
+
+                                    <li class="btn-mobile-menu">Меню</li>
+                                    <li class="menu-close">Закрыть меню</li>
+
+                                    <li class="mobile animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay="0">
+                                        <a href="#main" name="main">Главная</a>
+                                    </li>
+
+                                    <li class="mobile animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".2s">
                                         <a href="#portfolio" name="portfolio">Услуги</a>
                                     </li>
-                                    <li class="animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".1s">
+
+                                    <li class="mobile animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".1s">
                                         <a href="#uslugi" name="uslugi">Портфолио</a>
                                     </li>
-                                    <li class="animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".3s">
+
+                                    <li class="mobile animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".3s">
                                         <a href="#prices" name="prices">Цены</a>
                                     </li>
-                                    <li class="animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".4s">
+
+                                    <li class="mobile animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".4s">
                                         <a href="#maps" name="maps">Контакты</a>
                                     </li>
+
                                 </ul>
+                                </nav>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-sm-5 col-md-3 col-xs-8">
                                 <div class="header-phone animated wow bounceInRight" data-wow-duration="1s" data-wow-offset="150" data-wow-delay=".5s">
                                     <p>
                                         <span class="phone-code">(044)</span> 245-98-46<br>
@@ -124,7 +119,7 @@
             </div>
                 <div class="col-sm-12">
                     <h1>Разработка сайтов в <span class="fw-700 main-color">MediaOne</span></h1>
-                    <p class="first col-sm-10">Заказать создание сайта в Киеве от студии MediaOne, значит доверить свой имидж лучшим — <span class="fw-700 main-color">Вы гарантировано получите 100% отдачу</span> и великолепный результат. За время нашей работы было реализовано немало проектов, которые помогают клиентам решать следующие задачи:</p>
+                    <p class="first col-sm-12 col-md-10">Заказать создание сайта в Киеве от студии MediaOne, значит доверить свой имидж лучшим — <span class="fw-700 main-color">Вы гарантировано получите 100% отдачу</span> и великолепный результат. За время нашей работы было реализовано немало проектов, которые помогают клиентам решать следующие задачи:</p>
                     <div class="row">
                         <div class="col-sm-3 goals animated wow fadeInLeft" data-wow-duration="1s" data-wow-offset="250" data-wow-delay=".3s">
                             <img src="img/mail.png" alt="">
@@ -548,10 +543,12 @@
                 <div class="col-sm-9">
                     <h2>Остались вопросы?</h2>
                     <p><span class="fw-700 second-color">Просто позвоните</span> нам по этому номеру<br><span class="fw-100 pre-footer-phone main-color">(044) 452-98-63</span><br> или оставьте нам Ваш номер и мы Вам обязательно перезвоним и ответим на все вопросы!</p>
+                    <center>
                     <form action="#" id="ajaxform" method="post">
                         <input type="text" placeholder="Телефон" name="phone" class="phone">
                         <input value="Отправить" type="submit" id="submit2">
                     </form>
+                    </center>
                 </div>
             </div>
         </div>

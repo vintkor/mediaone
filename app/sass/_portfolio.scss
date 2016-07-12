@@ -13,7 +13,7 @@
 Modules - reusable parts of our design
 -------------------------------- */
 .cd-container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -57,7 +57,7 @@ main.slide-out .cd-overlay {
   background: $white;
 }
 .cd-section .cd-container {
-  max-width: 768px;
+  max-width: 1000px;
 }
 @media only screen and (min-width: 768px) {
   .cd-section {
@@ -88,7 +88,7 @@ main.slide-out .cd-overlay {
   background: #FFF;
 }
 #cd-team .cd-container {
-  max-width: 90%;
+  max-width: 100%;
 }
 #cd-team li {
   margin-bottom: 2em;
@@ -145,7 +145,7 @@ main.slide-out .cd-overlay {
 }
 @media only screen and (min-width: 768px) {
   #cd-team li {
-    width: 23%;
+    width: 31%;
     float: left;
     margin-right: 1.5%;
   }
@@ -239,7 +239,7 @@ main.slide-out .cd-overlay {
   height: 50px;
   overflow: hidden;
   position: fixed;
-  top: 10px;
+  top: 60px;
   right: 10px;
   background: url("../img/cd-icon-close.svg") no-repeat center center;
   background-size: cover;

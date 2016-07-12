@@ -649,3 +649,46 @@ $(document).ready(function(){
 		$('body,html').animate({scrollTop: top}, 800);
 	});
 });
+
+/*-------------------------------- Mobile меню ---------------------------------*/
+
+
+$(document).ready(function(){
+	var _width = $('html').width();
+
+	function windowResize () {
+		if (_width < 992) {
+			$('ul#top-nav').addClass('mobile-menu');
+			$('ul#top-nav').removeClass('top-menu');
+			$('li.btn-mobile-menu').css('display', 'block');
+			$('li.mobile').css('display', 'none');
+			$('li.menu-close').hide();
+
+			$('li.btn-mobile-menu').click(function(){
+				$('li.mobile').css('display', 'block');
+				$('li.btn-mobile-menu').hide();
+				$('li.menu-close').show().addClass('animated fadeIn');
+			});
+
+			$('li.menu-close').click(function(){
+				$('li.mobile').css('display', 'none');
+				$('li.btn-mobile-menu').show().addClass('animated fadeIn');
+				$('li.menu-close').hide();
+			});
+			
+
+		} else if (_width >= 992) {
+			$('ul#top-nav').removeClass('mobile-menu');
+			$('ul#top-nav').addClass('top-menu');
+			$('li.btn-mobile-menu').hide();
+			$('li.menu-close').hide();
+		}		
+	}
+
+	windowResize();
+
+	$(window).resize(function(){
+		_width = $('html').width();
+		windowResize();
+	});
+});

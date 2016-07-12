@@ -24,7 +24,28 @@
   src: url(../fonts/MuseoSansCyrl_900.otf);
   font-weight: 900; }
 
-/*---------------------- Портфолио ------------------------*/
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 48px; }
+
+h3 {
+  font-size: 32px; }
+
+h4 {
+  font-size: 19.2px; }
+
+h5 {
+  font-size: 16px; }
+
+h6 {
+  font-size: 14.4px; }
+
+p, a, div, span, li {
+  font-size: 16px; }
+
+/*---------------------- Услуги ------------------------*/
 .cd-main li {
   list-style: none; }
 
@@ -53,13 +74,13 @@
   transition: transform 0.5s 0s;
   transition: transform 0.5s 0s, -webkit-transform 0.5s 0s; }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .cd-main.fold-is-open > * {
     -webkit-transform: translateX(600px);
         -ms-transform: translateX(600px);
             transform: translateX(600px); } }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 768px) {
   .cd-main::before {
     content: 'desktop'; }
   .cd-main.fold-is-open > * {
@@ -95,7 +116,7 @@
 
 .cd-item {
   width: 100%;
-  height: 300px;
+  height: 200px;
   text-align: center;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
@@ -157,7 +178,9 @@
           border-radius: 50em;
   border: 1px solid #fff; }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 30px; }
   .cd-item {
     width: 50%;
     float: left;
@@ -341,11 +364,11 @@ folding panel
   -webkit-transition: opacity 0.2s 0.5s;
   transition: opacity 0.2s 0.5s; }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .cd-folding-panel {
     width: 600px; } }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 768px) {
   .cd-folding-panel {
     left: 50%;
     right: auto;
@@ -452,7 +475,7 @@ folding panel
   transition: transform 0.2s 0.7s, opacity 0.2s 0.7s;
   transition: transform 0.2s 0.7s, opacity 0.2s 0.7s, -webkit-transform 0.2s 0.7s; }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 768px) {
   .cd-fold-content {
     padding: 4em; }
   .cd-fold-content > * {
@@ -532,7 +555,7 @@ main {
 Modules - reusable parts of our design
 -------------------------------- */
 .cd-container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto; }
 
@@ -583,7 +606,7 @@ main.slide-out .cd-overlay {
   background: #fff; }
 
 .cd-section .cd-container {
-  max-width: 768px; }
+  max-width: 1000px; }
 
 @media only screen and (min-width: 768px) {
   .cd-section {
@@ -607,7 +630,7 @@ main.slide-out .cd-overlay {
   background: #FFF; }
 
 #cd-team .cd-container {
-  max-width: 90%; }
+  max-width: 100%; }
 
 #cd-team li {
   margin-bottom: 2em;
@@ -674,7 +697,7 @@ main.slide-out .cd-overlay {
 
 @media only screen and (min-width: 768px) {
   #cd-team li {
-    width: 23%;
+    width: 31%;
     float: left;
     margin-right: 1.5%; }
   #cd-team li:nth-child(4n) {
@@ -776,7 +799,7 @@ main.slide-out .cd-overlay {
   height: 50px;
   overflow: hidden;
   position: fixed;
-  top: 10px;
+  top: 60px;
   right: 10px;
   background: url("../img/cd-icon-close.svg") no-repeat center center;
   background-size: cover;
@@ -1449,27 +1472,6 @@ xkeyframes
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
 
-h1 {
-  font-size: 48px; }
-
-h2 {
-  font-size: 48px; }
-
-h3 {
-  font-size: 32px; }
-
-h4 {
-  font-size: 19.2px; }
-
-h5 {
-  font-size: 16px; }
-
-h6 {
-  font-size: 14.4px; }
-
-p, a, div, span, li {
-  font-size: 16px; }
-
 body {
   background: #fff; }
 
@@ -1559,6 +1561,8 @@ header {
   margin: 0;
   text-align: right;
   overflow: hidden; }
+  .top-menu .menu-close {
+    display: none; }
   .top-menu li {
     margin-top: 6px;
     padding-top: 5px;
@@ -1576,21 +1580,47 @@ header {
         color: #00AC5C;
         text-decoration: none; }
 
-.svg-home {
-  width: 18px;
-  height: 18px;
-  -webkit-transition: .2s;
-  transition: .2s; }
-  .svg-home:hover {
-    fill: #00AC5C; }
+li.btn-mobile-menu, li.close {
+  width: 50px;
+  height: 50px; }
+
+.wrapper-menu {
+  position: relative; }
+
+.mobile-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 888; }
+  .mobile-menu li {
+    display: block;
+    position: relative; }
+    .mobile-menu li a {
+      background: #00AC5C;
+      color: #fff;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+      padding: 10px 20px;
+      width: 100%; }
+  .mobile-menu .btn-mobile-menu,
+  .mobile-menu .menu-close {
+    font-size: 16px;
+    padding-top: 20px;
+    margin-bottom: 20px; }
+  .mobile-menu .btn-mobile-menu {
+    color: #007941; }
+  .mobile-menu .menu-close {
+    color: #d22;
+    display: none;
+    list-style: none; }
 
 /*-----Липкая шапка--------*/
 .headhesive {
   position: fixed;
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
-  overflow: hidden; }
+          transform: translateY(-100%); }
+  .headhesive .mobile-menu {
+    display: none; }
 
 .headhesive--unstick {
   width: 100%;
@@ -1610,6 +1640,8 @@ header {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 0;
   padding-bottom: 0px; }
+  .headhesive--stick .mobile-menu {
+    display: block; }
   .headhesive--stick .header-phone p {
     margin-bottom: 0; }
   .headhesive--stick .callback {
@@ -1898,3 +1930,70 @@ header {
       left: -5px; }
     .tabs .active:before {
       right: -5px; }
+
+/*--------------------- Media Query ------------------*/
+@media (max-width: 1200px) {
+  /*---------------------- Header ------------------------*/
+  .top-menu li a {
+    padding: 6px 2px;
+    font-weight: 500; }
+  /*-----------------------About us----------------------------*/
+  .about-us img.comp {
+    right: -100px; } }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 35.2px; }
+  h2 {
+    font-size: 25.6px; }
+  h3 {
+    font-size: 22.4px; }
+  h4 {
+    font-size: 19.2px; }
+  h5 {
+    font-size: 16px; }
+  h6 {
+    font-size: 14.4px; }
+  p, a, div, span, li {
+    font-size: 16px; }
+  /*---------------------- Header ------------------------*/
+  .logo {
+    margin-top: 5px; }
+  /*-----------------------About us----------------------------*/
+  .about-us .first,
+  .about-us .last {
+    margin-top: 400px;
+    font-size: 19.2px;
+    line-height: 27.2px; }
+  .about-us .last {
+    margin-top: 50px; }
+  .about-us .goals p {
+    font-size: 16px; }
+  .about-us img.comp {
+    right: 0; }
+  /*-----------------------------Pre-footer------------------------*/
+  .pre-footer {
+    padding-bottom: 80px; }
+    .pre-footer h2 {
+      font-size: 32px; }
+    .pre-footer .pre-footer-phone {
+      font-size: 32px;
+      line-height: 48px; }
+    .pre-footer .question {
+      max-height: 463px;
+      top: 60px; }
+    .pre-footer .question-1 {
+      max-height: 463px;
+      top: 60px; }
+    .pre-footer p {
+      font-size: 19.2px;
+      line-height: 27.2px; }
+  .port {
+    width: 100%;
+    height: 200px;
+    -webkit-border-radius: 5px 5px 0 0;
+            border-radius: 5px 5px 0 0; } }
+
+@media (min-width: 320px) {
+  .logo {
+    max-width: 200px; } }

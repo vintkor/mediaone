@@ -1,0 +1,23 @@
+@media (max-width: 1200px) {
+
+
+	/*---------------------- Header ------------------------*/
+
+	.top-menu {
+	    li {
+	        a {
+	            padding: 6px 2px;
+	            font-weight: 500;
+	        }
+	    }
+	}
+
+	/*-----------------------About us----------------------------*/
+
+	.about-us {
+
+	    img.comp {
+	        right: -100px;
+	    }
+	}
+}
