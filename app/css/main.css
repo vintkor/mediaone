@@ -1907,6 +1907,10 @@ li.btn-mobile-menu, li.close {
     .tabs .active:hover {
       color: #fff; }
 
+.star {
+  color: #d22;
+  text-align: right; }
+
 /*--------------------- Media Query ------------------*/
 @media (max-width: 1200px) {
   /*---------------------- Header ------------------------*/
