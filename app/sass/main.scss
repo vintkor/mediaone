@@ -82,7 +82,7 @@ a:focus, a:active {
     width: 100%;
     height: auto;
     transition: .2s;
-    padding-top: 0px;
+    padding-top: 6px;
 }
 
 
@@ -412,32 +412,6 @@ li.btn-mobile-menu, li.close {
         border: 2px solid $main-color;
     }
 }
-
-/*-----------------------Контакты----------------------------*/
-
-// .maps {
-//     overflow: hidden;
-//     // box-shadow: 0 0 15px rgba($black, .2);
-// }
-
-// #yamaps {
-//     position: relative;
-//     height: 50vh;
-//     width: 100%;
-// }
-// .forma {
-//     box-shadow: 0 0 10px rgba($black, .5);
-//     position: absolute;
-//     top: -50vh;
-//     right: 0;
-//     bottom: 0;
-//     z-index: 99;
-//     background: rgba($white, .7);
-//     z-index: 2;
-// }
-
-/*-----------------------------Footer------------------------*/
-
 
 /*-----------------------------Google maps------------------------*/
 

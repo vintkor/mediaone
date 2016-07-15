@@ -1529,7 +1529,7 @@ a:focus, a:active {
   height: auto;
   -webkit-transition: .2s;
   transition: .2s;
-  padding-top: 0px; }
+  padding-top: 6px; }
 
 .header-phone {
   text-align: right; }
@@ -1781,8 +1781,6 @@ li.btn-mobile-menu, li.close {
     font-weight: 100;
     border: 2px solid #00AC5C; }
 
-/*-----------------------Контакты----------------------------*/
-/*-----------------------------Footer------------------------*/
 /*-----------------------------Google maps------------------------*/
 #google-container {
   position: relative;
