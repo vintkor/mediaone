@@ -546,7 +546,6 @@ li.btn-mobile-menu, li.close {
         font-weight: 100;
         color: darken($white, 50%);
         border: 1px solid darken($white, 50%);
-        border-radius: 25px;
         margin-right: 15px;
         &:last-child {
             margin-right: 0;
@@ -560,30 +559,10 @@ li.btn-mobile-menu, li.close {
         background: $main-color;
         position: relative;
         color: $white;
-        text-shadow: 1px 1px 1px rgba($black, .4);              
-        border-radius: 25px;
+        text-shadow: 1px 1px 1px rgba($black, .4);
         border: 1px solid darken($main-color, 3%);
         &:hover {
             color: $white;
-        }
-        &:after,
-        &:before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 50%;
-            margin-top: -5px;
-            width: 10px;
-            height: 10px;
-            background: $white;
-            border-radius: 50%;
-            border: 1px solid darken($main-color, 3%);
-        }
-        &:after {
-            left: -5px;
-        }
-        &:before {
-            right: -5px;
         }
     }
 }

@@ -174,8 +174,6 @@ p, a, div, span, li {
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 1em 1.3em;
-  -webkit-border-radius: 50em;
-          border-radius: 50em;
   border: 1px solid #fff; }
 
 @media only screen and (min-width: 768px) {
@@ -1894,8 +1892,6 @@ li.btn-mobile-menu, li.close {
     font-weight: 100;
     color: gray;
     border: 1px solid gray;
-    -webkit-border-radius: 25px;
-            border-radius: 25px;
     margin-right: 15px; }
     .tabs a:last-child {
       margin-right: 0; }
@@ -1907,27 +1903,9 @@ li.btn-mobile-menu, li.close {
     position: relative;
     color: #fff;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-    -webkit-border-radius: 25px;
-            border-radius: 25px;
     border: 1px solid #009d54; }
     .tabs .active:hover {
       color: #fff; }
-    .tabs .active:after, .tabs .active:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 50%;
-      margin-top: -5px;
-      width: 10px;
-      height: 10px;
-      background: #fff;
-      -webkit-border-radius: 50%;
-              border-radius: 50%;
-      border: 1px solid #009d54; }
-    .tabs .active:after {
-      left: -5px; }
-    .tabs .active:before {
-      right: -5px; }
 
 /*--------------------- Media Query ------------------*/
 @media (max-width: 1200px) {
