@@ -27,7 +27,6 @@ p, a, div, span, li {font-size: $font-size;}
     text-shadow: 1px 1px 1px rgba($black, .5);
 }
 
-
 body {
     background: $white;
 }
@@ -40,8 +39,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p, a, div, span, li {
-    font-family: "Museo Sans Cyrl";
-    font-weight: 300;
+    font-family: "PT Sans";
+    font-weight: 400;
     line-height: $font-size * 1.7;
 }
 
@@ -341,14 +340,12 @@ li.btn-mobile-menu, li.close {
 /*-----------------------------Pre-footer------------------------*/
 
 .pre-footer {
-    background:  linear-gradient(to bottom, $white, #eee);
+    background: url(../img/honeynet.png), linear-gradient(35deg, #292929, #6E6767);
     position: relative;
-    // box-shadow: 0 10px 15px rgba($black, .3);
     z-index: 5;
     padding-bottom: 80px;
     overflow: hidden;
-    border-top: 1px solid darken($white, 20%);
-    border-bottom: 1px solid darken($white, 20%);
+    color: $white;
 
     .position {
         position: relative;
