@@ -36,13 +36,16 @@ gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         'app/libs/jquery/dist/jquery.js', // Берем jQuery
         'app/libs//bootstrap/dist/js/bootstrap.js',
-        'app/libs/slippry/dist/slippry.min.js',
         'app/libs/Headhesive.js/dist/headhesive.js',
         'app/libs/modernizr.js',
         'app/libs/jquery.maskedinput/dist/jquery.maskedinput.js',
         'app/libs/wow.js',
         'app/libs/sweetalert/dist/sweetalert.min.js',
-        'app/libs/priority-nav/dist/priority-nav.js'
+        'app/libs/priority-nav/dist/priority-nav.js',
+        'app/libs/layerslider/js/greensock.js',
+        'app/libs/layerslider/js/layerslider.kreaturamedia.jquery.js',
+        'app/libs/layerslider/js/layerslider.transitions.js',
+        'app/libs/jquery.glide.js'
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         //.pipe(uglify()) // Сжимаем JS файл

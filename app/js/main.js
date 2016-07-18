@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $('#slippry').slippry();
+    // $('#slippry').slippry();
+
     var header = new Headhesive('#stick', options);
     var options = {
 	  offset: '.section-2'
@@ -605,3 +606,30 @@ $(document).ready(function(){
 		windowResize();
 	});
 });
+
+
+
+
+function setEqualHeight(columns){var tallestcolumn = 0;columns.each(function(){
+		currentHeight = $(this).height();if(currentHeight > tallestcolumn){
+		tallestcolumn = currentHeight;}});columns.height(tallestcolumn);}
+
+$(document).ready(function() {setEqualHeight($(".slide"));});
+
+
+
+$(document).ready(function(){
+	$('.slider').glide({
+		autoplay: 2000
+	})
+
+
+	jQuery("#layerslider").layerSlider({
+			responsive: false,
+			responsiveUnder: 1280,
+			layersContainer: 1280,
+			skin: 'noskin',
+			hoverPrevNext: false,
+			skinsPath: '../layerslider/skins/'
+		});
+})
