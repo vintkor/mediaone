@@ -45,7 +45,7 @@ gulp.task('scripts', function() {
         'app/libs/layerslider/js/greensock.js',
         'app/libs/layerslider/js/layerslider.kreaturamedia.jquery.js',
         'app/libs/layerslider/js/layerslider.transitions.js',
-        'app/libs/jquery.glide.js'
+        'app/libs/owl.carousel/owl.carousel.js'
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         //.pipe(uglify()) // Сжимаем JS файл

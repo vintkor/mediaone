@@ -619,12 +619,7 @@ $(document).ready(function() {setEqualHeight($(".slide"));});
 
 
 $(document).ready(function(){
-	$('.slider').glide({
-		autoplay: 2000
-	})
-
-
-	jQuery("#layerslider").layerSlider({
+	$("#layerslider").layerSlider({
 			responsive: false,
 			responsiveUnder: 1280,
 			layersContainer: 1280,
@@ -632,4 +627,27 @@ $(document).ready(function(){
 			hoverPrevNext: false,
 			skinsPath: '../layerslider/skins/'
 		});
+
+
+	$(".owl-carousel").owlCarousel({
+		loop:true,
+		margin:20,
+		lazyLoad:true,
+		autoplay:true,
+	    autoplayTimeout:2000,
+	    autoplayHoverPause:true,
+	    nav:true,
+	    navText: [ '&larr;', '&rarr;' ],
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:4
+            }
+        }
+	});
 })
