@@ -1286,9 +1286,10 @@ li.btn-mobile-menu, li.close {
     top: 200px;
     right: -200px; }
 
-/*-----------------------------Section question------------------*/
+/*-----------------------------Section callback------------------*/
 section.callback {
-  background: #dee;
+  background: -webkit-radial-gradient(rgba(221, 238, 238, 0.3), #dee);
+  background: radial-gradient(rgba(221, 238, 238, 0.3), #dee);
   padding-bottom: 60px;
   position: relative;
   z-index: 1; }
@@ -1452,6 +1453,19 @@ section.callback {
   padding: 7px 25px;
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+
+/*-----------------------------Footer------------------------*/
+footer {
+  background: #000;
+  color: #fff;
+  padding: 10px 0; }
+  footer p {
+    color: #fff; }
+  footer .footer-right {
+    text-align: right; }
+  footer img {
+    width: 26px;
+    height: auto; }
 
 /*----------------------------Bootstrap modal--------------------------------*/
 @media (min-width: 768px) {
