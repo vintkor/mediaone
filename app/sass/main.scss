@@ -30,9 +30,7 @@ p, a, div, span, li {font-size: $font-size;}
 
 
 ::selection {
-    background: $main-color;
-    color: $white;
-    text-shadow: 1px 1px 1px rgba($black, .5);
+    background: rgba($second-color, .5);
 }
 
 body {
@@ -136,13 +134,9 @@ a:focus, a:active {
         color: darken($black, 5%);
         padding-top: 9px;
         line-height: 0;
-        // color: $second-color;
         padding-bottom: 3px;
 
         .phone-code {
-            // color: $black;
-            // font-weight: 100;
-            // vertical-align: top;
             font-size: inherit;
             font-weight: 400;
         }
@@ -183,10 +177,6 @@ header {
         padding-top: 5px;
         list-style: none;
         display: inline-block;
-        // &:first-child {
-        //     border: 2px solid $main-color;
-        //     border-radius: 5px;
-        // }
         a {
             padding: 6px 10px;
             color: $black;
@@ -221,8 +211,6 @@ li.btn-mobile-menu, li.close {
     li {
         display: block;
         position: relative;
-        &:nth-child(2) {
-        }
         a {
             background: $main-color;
             color: $white;
@@ -251,8 +239,6 @@ li.btn-mobile-menu, li.close {
 
 /*-----Липкая шапка--------*/
 
-
-
 .headhesive {
     position: fixed;
     transform: translateY(-100%);
@@ -271,7 +257,7 @@ li.btn-mobile-menu, li.close {
     top: 0;
     width: 100%;
     background: $white;
-    z-index: 9999;
+    z-index: 300;
     transform: translateY(0%);
     transition: .5s;
     box-shadow: 0 0 10px rgba($black, .2);
@@ -683,9 +669,19 @@ footer {
     }
 }
 
-.star {
-    color: #d22;
-    text-align: right;
+.modal-body {
+    p {
+        text-align: center;
+    }
+}
+
+.modal-header {
+    background: $main-color;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid darken($main-color, 5%);
+    h4 {
+        color: $white;
+    }
 }
 
 

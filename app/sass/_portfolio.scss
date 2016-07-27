@@ -29,7 +29,6 @@ Main components
 -------------------------------- */
 main {
   position: relative;
-  z-index: 2;
   transition-property: transform;
   transition-duration: 0.3s;
 }
@@ -166,6 +165,7 @@ main.slide-out .cd-overlay {
   transform: translateX(100vw);
   transition-property: transform;
   transition-duration: 0.3s;
+  z-index: 400;
 }
 .cd-member-bio.slide-in {
   transform: translateX(0);
@@ -247,6 +247,7 @@ main.slide-out .cd-overlay {
   white-space: nowrap;
   z-index: 3;
   display: none;
+  z-index: 500;
 }
 .cd-member-bio-close.is-visible {
   display: block;
@@ -254,8 +255,8 @@ main.slide-out .cd-overlay {
 }
 @media only screen and (min-width: 1200px) {
   .cd-member-bio-close {
-    right: 40px;
-    top: 100px;
+    right: 80px;
+    top: 80px;
   }
 }
 
@@ -333,7 +334,6 @@ xkeyframes
     display: block;
     text-align: center;
     position: relative;
-    padding-top: 80px;
   }
 }
 

@@ -663,7 +663,6 @@ Main components
 -------------------------------- */
 main {
   position: relative;
-  z-index: 2;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -813,7 +812,8 @@ main.slide-out .cd-overlay {
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s; }
+          transition-duration: 0.3s;
+  z-index: 400; }
 
 .cd-member-bio.slide-in {
   -webkit-transform: translateX(0);
@@ -899,7 +899,8 @@ main.slide-out .cd-overlay {
   text-indent: 100%;
   white-space: nowrap;
   z-index: 3;
-  display: none; }
+  display: none;
+  z-index: 500; }
 
 .cd-member-bio-close.is-visible {
   display: block;
@@ -908,8 +909,8 @@ main.slide-out .cd-overlay {
 
 @media only screen and (min-width: 1200px) {
   .cd-member-bio-close {
-    right: 40px;
-    top: 100px; } }
+    right: 80px;
+    top: 80px; } }
 
 .cd-overlay {
   position: absolute;
@@ -985,8 +986,7 @@ xkeyframes
   .cd-member-bio h2 {
     display: block;
     text-align: center;
-    position: relative;
-    padding-top: 80px; }
+    position: relative; }
 
 .cd-bio-content {
   width: 100%;
@@ -1005,14 +1005,10 @@ xkeyframes
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
 
 ::-moz-selection {
-  background: #00AC5C;
-  color: #fff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+  background: rgba(52, 175, 240, 0.5); }
 
 ::selection {
-  background: #00AC5C;
-  color: #fff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+  background: rgba(52, 175, 240, 0.5); }
 
 body {
   background: #fff; }
@@ -1197,7 +1193,7 @@ li.btn-mobile-menu, li.close {
   top: 0;
   width: 100%;
   background: #fff;
-  z-index: 9999;
+  z-index: 300;
   -webkit-transform: translateY(0%);
       -ms-transform: translateY(0%);
           transform: translateY(0%);
@@ -1528,6 +1524,13 @@ footer {
     .tabs .active:hover {
       color: #fff; }
 
-.star {
-  color: #d22;
-  text-align: right; }
+.modal-body p {
+  text-align: center; }
+
+.modal-header {
+  background: #00AC5C;
+  -webkit-border-radius: 5px 5px 0 0;
+          border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid #00934e; }
+  .modal-header h4 {
+    color: #fff; }
